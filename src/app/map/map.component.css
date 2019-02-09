@@ -1,0 +1,23 @@
+.map-content-container {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: -webkit-calc(100% - 70px);
+  height:    -moz-calc(100% - 70px);
+  height:         calc(100% - 70px);}
+
+.map-menu {
+  background-color: #2a343e;
+}
+
+.map-container {
+  padding: 0;
+}
+
+.map-iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border: none;
+}
