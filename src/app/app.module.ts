@@ -7,6 +7,7 @@ import { MapComponent } from './map/map.component';
 import { MethodologyComponent } from './methodology/methodology.component';
 import { PressRoomComponent } from './press-room/press-room.component';
 import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
     MethodologyComponent,
     PressRoomComponent,
     ContactComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
