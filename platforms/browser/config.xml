@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="edu.altec.educacion" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Educación - ALTEC</name>
+    <description>
+        ANEP
+    </description>
+    <author email="devops@datauy.org" href="http://datauy.org/">
+      DATA Uy
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="http://tomamosuna.info/*" />
+    <icon src="resources/ios/icon/icon-small@3x.png" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="25" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="SplashScreen" value="none" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="SplashScreenDelay" value="3000" />
+</widget>

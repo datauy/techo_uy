@@ -1,0 +1,1443 @@
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [1mionic.project[22m file found in [1m/home/datauy/educacion[22m--please rename it to 
+       [1mionic.config.json[22m, or your project directory will not be detected!
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.1.2[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m Sorry! [32mionic serve[39m can only be run in an Ionic project directory.
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.1.2[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[GStarting server (address: [1m0.0.0.0[22m, port: [1m8104[22m, dev server port: [1m53706[22m) - Ctrl+C 
+to cancel
+[2K[GProxy created [1m/im[22m => [1mhttp://desa.imm.gub.uy:8080[22m
+[2K[GProxy created [1m/backend[22m => [1mhttps://backend.educacion.thor.datauy.org[22m
+[2K[G[2m[[22m[32m[1m[40mOK[49m[22m[39m[2m][22m Development server running!
+     Local: [1mhttp://localhost:8104[22m
+     External: [1mhttp://66.175.212.192:8104[22m
+     DevApp: [1mtomamos_una@8104[22m on [1mfreyja[22m
+
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.782219943536417 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.24349067216701958 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.40560376069149884 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.49775995878769774 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8586403424736722 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8201287501660359 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5461675578467649 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.580891738513269 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.15930508264945642 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8864735742394099 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7418351164514323 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2164655494744403 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.04499528920734308 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6407799472548665 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8274283717293256 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.894005506693498 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.977972260408154 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.349351126983902 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9418044613641974 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.23818828395156966 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8448883983032394 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7094657553056618 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5664998545627777 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5795968084454017 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8329103383864882 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.045184237479649614 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4276233850797928 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.33944749331821367 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8796483332955196 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9013950731191176 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6584239475551115 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7473295930754398 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.13058316352623 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2134833226298385 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8796002493140738 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.05409143858847232 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9489700015025715 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7872476544333191 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.11602357347635839 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.45220281191462797 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8809563555622866 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.1277147261244287 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.06011586495033483 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8023888368355834 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.14245825056880812 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.08077899019231394 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.37913053407893393 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7785914862146122 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.43128393888424754 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2928072902657435 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5291026035635547 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2395861161034185 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3358069522820748 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.008943242741697333 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.15689164892007046 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9069598016928628 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9369630898479913 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5505832985292833 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7649079369993204 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.40449879533897315 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.31093439712252735 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6474097275536816 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.31380390407831626 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.29724760268381223 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.1935459654706 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.661814063412657 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5869089489307244 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5596060295224858 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5903203055659765 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4530829727443777 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.03333937143011889 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6578068702450695 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.006389424554731349 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.25610674822562296 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9766983752724692 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9926318833927608 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7168714030405887 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8720988180009366 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3853228210130957 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6912207519393612 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.32630931023312515 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5329591058439538 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.15847169741630318 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5249307036129909 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.05789168805307776 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.1882269035919626 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.040743823875595275 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6104351573673819 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2287327394191898 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.13926798207231506 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.1958177362006801 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5593488821518491 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5076712205334326 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7608763196205857 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7966275798993809 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8662657983554121 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4655737723288287 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.04654686648973971 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6319911516744554 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.19109197535264366 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.10144419745653432 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.13998509815894566 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6104585463639285 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9287061014237923 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2230076080294121 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.45019440729945503 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3223364176916559 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6047607978368117 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.11289643130341132 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5896334817470628 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4496235810149003 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.779358636687675 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5661685763662552 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6303990063674512 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3171525892885876 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.06565766301571863 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6168045288956703 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6240495583987253 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5417441685208526 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5685640962325273 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9323936866224094 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.96726913496142 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4913185339961872 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7164667615593967 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8641534025595823 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3393657289237664 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.31989428027958366 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9809631112660222 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.04474829303125971 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5442431669003303 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.11427252831837276 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.686681255028917 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2396514526383866 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8189127729934769 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2987937078077003 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.32693718119991 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8435209778809183 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2727969441738578 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4640866304211855 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.1322667826135724 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.373875414006666 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5998611941437644 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.40615060157812666 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.11844759266388727 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.014660563181346786 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.10117480580517091 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8823120638795354 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8653198409701095 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.25422397670226426 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9169908174870549 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.14573353356096463 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.49814870698132174 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7517611517261114 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.41953197939891984 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.08116467984820708 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5796078486038181 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.03492875547893437 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.08220966199154889 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5037574098192314 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6748985919934389 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.40036287734971165 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.18405132873436547 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.93253723653774 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.33838621071955544 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6857322192517847 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.011601769883126334 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5532680449835015 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5338306463332985 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.503471662838527 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.45915621982208155 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7930726153200272 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4408922001433031 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6030827703173647 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7606119498295778 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.13060415354600652 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9341007104833539 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5021628640232667 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.10878484795110355 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7543113398622532 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8114377670594317 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3326589170590033 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8157503979434899 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7799183532851905 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.4050829603913344 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.10498744076237143 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9089351964300616 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.010886338809230622 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.23725829885492322 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.050417507243837756 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.3618534009565766 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.044648321318107254 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9737986751966572 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.23807081137967945 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6518461180124322 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8703716050839023 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.899283389720474 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.24396208068959657 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9840162232587408 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6191343193439276 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.7318526938219041 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.771916833067358 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8653816386177613 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.8930993005613646 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.5924965367861561 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.9180714131021321 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.2872376536292567 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[16:54:24] [1mwww/dist/templates.js[22m changed
+[16:54:24] [1mwww/dist/templates.js[22m changed
+[16:55:06] [1mwww/dist/templates.js[22m changed
+[16:55:06] [1mwww/dist/app.js[22m changed
+[16:55:06] [1mwww/dist/css/ionic.app.css[22m changed
+[16:55:07] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request 
+        /sites/tomamos_una/files/json/users_geo.json?hash_id=0.6557923411360451 
+        from localhost:8104 to https://backend.educacion.thor.datauy.org 
+        (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[16:58:15] [1mwww/dist/templates.js[22m changed
+[16:58:16] [1mwww/dist/app.js[22m changed
+[16:58:16] [1mwww/dist/css/ionic.app.css[22m changed
+[16:58:16] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[17:06:37] [1mwww/dist/templates.js[22m changed
+[17:06:38] [1mwww/dist/app.js[22m changed
+[17:06:38] [1mwww/dist/css/ionic.app.css[22m changed
+[17:06:38] [1mwww/dist/css/ionic.app.min.css[22m changed
+[17:10:34] [1mwww/dist/templates.js[22m changed
+[17:10:35] [1mwww/dist/app.js[22m changed
+[17:10:35] [1mwww/dist/css/ionic.app.css[22m changed
+[17:10:36] [1mwww/dist/app.js[22m changed
+[17:10:36] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[17:17:37] [1mwww/dist/templates.js[22m changed
+[17:17:38] [1mwww/dist/app.js[22m changed
+[17:17:38] [1mwww/dist/css/ionic.app.css[22m changed
+[17:17:38] [1mwww/dist/css/ionic.app.min.css[22m changed
+[17:19:58] [1mwww/dist/templates.js[22m changed
+[17:19:59] [1mwww/dist/app.js[22m changed
+[17:19:59] [1mwww/dist/css/ionic.app.css[22m changed
+[17:19:59] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request /api/login from 
+        localhost:8104 to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [HPM] Error occurred while trying to proxy request / from localhost:8104 
+        to https://backend.educacion.thor.datauy.org (undefined) 
+        (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[17:37:32] [1mwww/dist/templates.js[22m changed
+[17:37:33] [1mwww/dist/app.js[22m changed
+[17:37:33] [1mwww/dist/css/ionic.app.css[22m changed
+[17:37:34] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:10:52] [1mwww/dist/templates.js[22m changed
+[14:10:53] [1mwww/dist/app.js[22m changed
+[14:10:53] [1mwww/dist/css/ionic.app.css[22m changed
+[14:10:53] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:12:13] [1mwww/dist/templates.js[22m changed
+[14:12:13] [1mwww/dist/css/ionic.app.css[22m changed
+[14:12:13] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:12:14] [1mwww/dist/app.js[22m changed
+[14:14:14] [1mwww/.giosaveg5X7Wn[22m changed
+[14:14:14] [1mwww/.giosaveg5X7Wn[22m changed
+[14:14:14] [1mwww/.giosaveg5X7Wn[22m changed
+[14:14:15] [1mwww/.giosaveg5X7Wn[22m changed
+[14:15:25] [1mwww/.giosavei8hJCI[22m changed
+[14:15:25] [1mwww/.giosavei8hJCI[22m changed
+[14:15:25] [1mwww/.giosavei8hJCI[22m changed
+[14:15:26] [1mwww/.giosavei8hJCI[22m changed
+[14:27:18] [1mwww/dist/templates.js[22m changed
+[14:27:19] [1mwww/dist/app.js[22m changed
+[14:27:19] [1mwww/dist/css/ionic.app.css[22m changed
+[14:27:20] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:28:13] [1mwww/dist/templates.js[22m changed
+[14:28:14] [1mwww/dist/app.js[22m changed
+[14:28:14] [1mwww/dist/css/ionic.app.css[22m changed
+[14:28:14] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:33:29] [1mwww/dist/templates.js[22m changed
+[14:33:30] [1mwww/dist/app.js[22m changed
+[14:33:30] [1mwww/dist/css/ionic.app.css[22m changed
+[14:33:30] [1mwww/dist/css/ionic.app.min.css[22m changed
+[14:34:19] [1mwww/dist/templates.js[22m changed
+[14:34:20] [1mwww/dist/app.js[22m changed
+[14:34:20] [1mwww/dist/css/ionic.app.css[22m changed
+[14:34:20] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.2.1[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[GStarting server (address: [1m0.0.0.0[22m, port: [1m8105[22m, dev server port: [1m53707[22m) - Ctrl+C 
+to cancel
+[2K[GProxy created [1m/im[22m => [1mhttp://desa.imm.gub.uy:8080[22m
+[2K[GProxy created [1m/backend[22m => [1mhttp://backend.educacion.thor.datauy.org[22m
+[2K[G[2m[[22m[32m[1m[40mOK[49m[22m[39m[2m][22m Development server running!
+     Local: [1mhttp://localhost:8105[22m
+     External: [1mhttp://66.175.212.192:8105[22m
+     DevApp: [1meducacion_altec@8105[22m on [1mfreyja[22m
+
+[12:12:03] [1mwww/dist/templates.js[22m changed
+[12:12:03] [1mwww/dist/app.js[22m changed
+[12:12:03] [1mwww/dist/css/ionic.app.css[22m changed
+[12:12:04] [1mwww/dist/css/ionic.app.min.css[22m changed
+[12:14:14] [1mwww/dist/templates.js[22m changed
+[12:14:15] [1mwww/dist/app.js[22m changed
+[12:14:15] [1mwww/dist/css/ionic.app.css[22m changed
+[12:14:15] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.5.0[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[GStarting server (address: [1m0.0.0.0[22m, port: [1m8105[22m, dev server port: [1m53707[22m) - Ctrl+C 
+to cancel
+[2K[GProxy created [1m/im[22m => [1mhttp://desa.imm.gub.uy:8080[22m
+[2K[GProxy created [1m/backend[22m => [1mhttp://backend.educacion.thor.datauy.org[22m
+[2K[G[2m[[22m[32m[1m[40mOK[49m[22m[39m[2m][22m Development server running!
+     Local: [1mhttp://localhost:8105[22m
+     External: [1mhttp://66.175.212.192:8105[22m
+     DevApp: [1meducacion_altec@8105[22m on [1mfreyja[22m
+
+[06:48:01] [1mwww/dist/templates.js[22m changed
+[06:48:03] [1mwww/dist/css/ionic.app.css[22m changed
+[06:48:03] [1mwww/dist/app.js[22m changed
+[06:48:03] [1mwww/dist/css/ionic.app.min.css[22m changed
+[06:51:43] [1mwww/dist/templates.js[22m changed
+[06:51:44] [1mwww/dist/app.js[22m changed
+[06:51:44] [1mwww/dist/css/ionic.app.css[22m changed
+[06:51:44] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:03:54] [1mwww/dist/templates.js[22m changed
+[07:03:56] [1mwww/dist/app.js[22m changed
+[07:03:56] [1mwww/dist/css/ionic.app.css[22m changed
+[07:03:56] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:06:42] [1mwww/dist/templates.js[22m changed
+[07:06:43] [1mwww/dist/app.js[22m changed
+[07:06:43] [1mwww/dist/css/ionic.app.css[22m changed
+[07:06:43] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:07:51] [1mwww/dist/templates.js[22m changed
+[07:07:51] [1mwww/dist/templates.js[22m changed
+[07:07:52] [1mwww/dist/app.js[22m changed
+[07:07:52] [1mwww/dist/css/ionic.app.css[22m changed
+[07:07:53] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:10:18] [1mwww/dist/templates.js[22m changed
+[07:10:19] [1mwww/dist/app.js[22m changed
+[07:10:19] [1mwww/dist/css/ionic.app.css[22m changed
+[07:10:19] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:21:04] [1mwww/dist/templates.js[22m changed
+[07:21:05] [1mwww/dist/app.js[22m changed
+[07:21:05] [1mwww/dist/css/ionic.app.css[22m changed
+[07:21:06] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:21:41] [1mwww/dist/templates.js[22m changed
+[07:21:43] [1mwww/dist/app.js[22m changed
+[07:21:43] [1mwww/dist/css/ionic.app.css[22m changed
+[07:21:43] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:22:53] [1mwww/dist/templates.js[22m changed
+[07:22:53] [1mwww/dist/templates.js[22m changed
+[07:22:54] [1mwww/dist/app.js[22m changed
+[07:22:54] [1mwww/dist/css/ionic.app.css[22m changed
+[07:22:54] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:23:47] [1mwww/dist/templates.js[22m changed
+[07:23:48] [1mwww/dist/app.js[22m changed
+[07:23:48] [1mwww/dist/css/ionic.app.css[22m changed
+[07:23:49] [1mwww/dist/app.js[22m changed
+[07:23:49] [1mwww/dist/css/ionic.app.min.css[22m changed
+[07:24:05] [1mwww/dist/templates.js[22m changed
+[07:24:06] [1mwww/dist/app.js[22m changed
+[07:24:06] [1mwww/dist/css/ionic.app.css[22m changed
+[07:24:06] [1mwww/dist/css/ionic.app.min.css[22m changed
+[08:45:08] [1mwww/dist/templates.js[22m changed
+[08:45:09] [1mwww/dist/app.js[22m changed
+[08:45:09] [1mwww/dist/css/ionic.app.css[22m changed
+[08:45:10] [1mwww/dist/css/ionic.app.min.css[22m changed
+[08:48:42] [1mwww/dist/templates.js[22m changed
+[08:48:43] [1mwww/dist/app.js[22m changed
+[08:48:43] [1mwww/dist/css/ionic.app.css[22m changed
+[08:48:43] [1mwww/dist/css/ionic.app.min.css[22m changed
+[08:57:12] [1mwww/dist/templates.js[22m changed
+[08:57:13] [1mwww/dist/app.js[22m changed
+[08:57:13] [1mwww/dist/css/ionic.app.css[22m changed
+[08:57:14] [1mwww/dist/css/ionic.app.min.css[22m changed
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.10.2[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[G[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [31mThe config file ([1m./ionic.config.json[22m) is not valid JSON format.[39m
+
+        
+        Please fix any JSON errors in the file.
+
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.10.2[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[G[2m[[22m[31m[1m[40mERROR[49m[22m[39m[2m][22m [31mThe config file ([1m./ionic.config.json[22m) is not valid JSON format.[39m
+
+        
+        Please fix any JSON errors in the file.
+
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.10.2[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[GStarting server (address: [1m0.0.0.0[22m, port: [1m8105[22m, dev server port: [1m53707[22m) - Ctrl+C 
+to cancel
+[2K[GProxy created [1m/im[22m => [1mhttp://desa.imm.gub.uy:8080[22m
+[2K[GProxy created [1m/backend[22m => [1mhttp://backend.educacion.thor.datauy.org[22m
+[2K[GProxy created [1m/ckan[22m => 
+[1mhttp://datos.techo.org/api/3/action/datastore_search?resource_id=7fe2c833-e16a-4b27-be40-9e8557fb439a&limit=589[22m
+[2K[G[2m[[22m[32m[1m[40mOK[49m[22m[39m[2m][22m Development server running!
+     Local: [1mhttp://localhost:8105[22m
+     External: [1mhttp://66.175.212.192:8105[22m
+     DevApp: [1meducacion_altec@8105[22m on [1mfreyja[22m
+
+[09:04:59] [1mwww/dist/templates.js[22m changed
+[09:05:00] [1mwww/dist/app.js[22m changed
+[09:05:00] [1mwww/dist/css/ionic.app.css[22m changed
+[09:05:00] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:08:03] [1mwww/dist/templates.js[22m changed
+[09:08:05] [1mwww/dist/app.js[22m changed
+[09:08:05] [1mwww/dist/css/ionic.app.css[22m changed
+[09:08:05] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:11:14] [1mwww/dist/templates.js[22m changed
+[09:11:15] [1mwww/dist/app.js[22m changed
+[09:11:15] [1mwww/dist/css/ionic.app.css[22m changed
+[09:11:15] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:12:39] [1mwww/dist/templates.js[22m changed
+[09:12:40] [1mwww/dist/app.js[22m changed
+[09:12:40] [1mwww/dist/css/ionic.app.css[22m changed
+[09:12:41] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:15:25] [1mwww/dist/templates.js[22m changed
+[09:15:26] [1mwww/dist/app.js[22m changed
+[09:15:26] [1mwww/dist/css/ionic.app.css[22m changed
+[09:15:27] [1mwww/dist/app.js[22m changed
+[09:15:27] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:17:01] [1mwww/dist/templates.js[22m changed
+[09:17:03] [1mwww/dist/app.js[22m changed
+[09:17:03] [1mwww/dist/css/ionic.app.css[22m changed
+[09:17:03] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:18:40] [1mwww/dist/templates.js[22m changed
+[09:18:41] [1mwww/dist/app.js[22m changed
+[09:18:41] [1mwww/dist/css/ionic.app.css[22m changed
+[09:18:42] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:23:27] [1mwww/dist/templates.js[22m changed
+[09:23:28] [1mwww/dist/app.js[22m changed
+[09:23:28] [1mwww/dist/css/ionic.app.css[22m changed
+[09:23:28] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:25:17] [1mwww/dist/templates.js[22m changed
+[09:25:18] [1mwww/dist/app.js[22m changed
+[09:25:18] [1mwww/dist/css/ionic.app.css[22m changed
+[09:25:19] [1mwww/dist/app.js[22m changed
+[09:25:19] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:26:05] [1mwww/dist/templates.js[22m changed
+[09:26:07] [1mwww/dist/app.js[22m changed
+[09:26:07] [1mwww/dist/css/ionic.app.css[22m changed
+[09:26:07] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:26:52] [1mwww/dist/templates.js[22m changed
+[09:26:52] [1mwww/dist/css/ionic.app.css[22m changed
+[09:26:52] [1mwww/dist/app.js[22m changed
+[09:26:53] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:32:50] [1mwww/dist/templates.js[22m changed
+[09:32:51] [1mwww/dist/css/ionic.app.css[22m changed
+[09:32:51] [1mwww/dist/app.js[22m changed
+[09:32:51] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:33:38] [1mwww/dist/templates.js[22m changed
+[09:33:39] [1mwww/dist/app.js[22m changed
+[09:33:39] [1mwww/dist/css/ionic.app.css[22m changed
+[09:33:40] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:35:17] [1mwww/dist/templates.js[22m changed
+[09:35:18] [1mwww/dist/css/ionic.app.css[22m changed
+[09:35:18] [1mwww/dist/app.js[22m changed
+[09:35:18] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:39:24] [1mwww/dist/templates.js[22m changed
+[09:39:26] [1mwww/dist/app.js[22m changed
+[09:39:26] [1mwww/dist/css/ionic.app.css[22m changed
+[09:39:26] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:47:39] [1mwww/dist/templates.js[22m changed
+[09:47:40] [1mwww/dist/app.js[22m changed
+[09:47:40] [1mwww/dist/css/ionic.app.css[22m changed
+[09:47:40] [1mwww/dist/css/ionic.app.min.css[22m changed
+[09:49:45] [1mwww/dist/templates.js[22m changed
+[09:49:46] [1mwww/dist/app.js[22m changed
+[09:49:46] [1mwww/dist/css/ionic.app.css[22m changed
+[09:49:46] [1mwww/dist/css/ionic.app.min.css[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/Gruntfile.js[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/.bower.json[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/bower.json[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/style.css[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/package.js[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/package.json[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/src/leaflet-layerjson.js[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/dist/leaflet-layerjson.min.js[22m 
+changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/dist/leaflet-layerjson.src.js[22m 
+changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/README.md[22m changed
+[15:05:16] [1mwww/lib-custom/leaflet-layerjson/index.html[22m changed
+[15:05:16] [1mwww/lib-custom/ion-wizard/ion-wizard.min.js[22m changed
+[15:05:16] [1mwww/style.css[22m changed
+[15:05:16] [1mwww/dist/templates.js[22m changed
+[15:05:16] [1mwww/dist/app.js[22m changed
+[15:05:16] [1mwww/dist/css/ionic.app.min.css[22m changed
+[15:05:16] [1mwww/dist/css/ionic.app.css[22m changed
+[15:05:16] [1mwww/screenlog.0[22m changed
+[15:05:16] [1mwww/index.html[22m changed
+[15:05:16] [1mwww/img/generic_pin_green.png[22m changed
+[15:05:16] [1mwww/img/bg-intro.jpg[22m changed
+[15:05:16] [1mwww/img/icon-comments.png[22m changed
+[15:05:16] [1mwww/img/select_arrow.png[22m changed
+[15:05:16] [1mwww/img/icon-resuelto.png[22m changed
+[15:05:16] [1mwww/img/generic_pin_red.png[22m changed
+[15:05:16] [1mwww/img/icon-search.png[22m changed
+[15:05:16] [1mwww/img/file-from-camera.png[22m changed
+[15:05:16] [1mwww/img/icon-camera.png[22m changed
+[15:05:16] [1mwww/img/Loading.gif[22m changed
+[15:05:16] [1mwww/img/icon-camera-black.png[22m changed
+[15:05:16] [1mwww/img/icon-user-anonymous.png[22m changed
+[15:05:16] [1mwww/EPSG32721.js[22m changed

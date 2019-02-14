@@ -2,12 +2,46 @@ pmb_im.services.factory('PinService', ['$http', 'leafletData','ConfigService', f
 
   var pinsURL = ConfigService.baseURL + "/sites/tomamos_una/files/json/users_geo.json";
   var apiURL = ConfigService.baseURL + "/api/"
+
+  proj4.defs('EPSG:32721', '+proj=utm +zone=21 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs');
+
+
+
 /**
    * Constructor, with class name
    */
   function Pin(_data) {
     angular.extend(this, _data);
   }
+
+  Pin.convertLatLongProj = function(lat,lon,scope) {
+   var _geoJson = {
+             "type": "FeatureCollection",
+             "crs": { "type": "name",
+                     "properties": {
+                             "name": 'urn:ogc:def:crs:EPSG::32721'
+                           }
+                     },
+             "features": [
+               { "type": "Feature",
+               "geometry":{
+                      "type":"Point",
+                      "coordinates":[lat,lon]
+                  },
+               "properties":{
+                   }
+               }
+             ]
+           };
+      var _latlng;
+      var point = L.Proj.geoJson(_geoJson, {
+        'pointToLayer': function(feature, latlng) {
+          _latlng = latlng;
+          return latlng;
+        }
+      });
+    return _latlng;
+  };
 
 
   Pin.getAll = function(){

@@ -1,0 +1,55 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "edu.altec.educacion"
+    }
+  }
+}

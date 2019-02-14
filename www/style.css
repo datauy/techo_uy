@@ -1,3 +1,11 @@
+.slider-pager{
+	display: none;
+}
+
+input[type="text"]{
+	border: 1px #000 solid;
+}
+
 body {
   height: 100%;
   width: 100%;

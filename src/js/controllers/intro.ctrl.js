@@ -17,9 +17,9 @@ pmb_im.controllers.controller('IntroCtrl', ['$scope', '$state',
         .getCurrentPosition(posOptions)
         .then(function(position) {
           LocationsService.save_initial_position(position);
-          $state.go("app.map");
+          $state.go("app.form");
         }, function(err) {
-          $state.go("app.map");
+          $state.go("app.form");
         });
     };
 

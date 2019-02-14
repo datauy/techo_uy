@@ -17,7 +17,7 @@ pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete'
 })
 
 .constant('ApiDataEndpoint', {
-  url: 'https://backend.e-openbar.com'
+  url: 'http://backend.educacion.thor.datauy.org'
 })
 
 
@@ -69,6 +69,17 @@ pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete'
     }
   })
 
+.state('app.form', {
+  cache: false,
+  url: "/form",
+  views: {
+    'menuContent' :{
+      templateUrl: "templates/form.html",
+      controller : "FormCtrl"
+    }
+  }
+})
+
 .state('app.intro', {
   cache: false,
   url: "/intro",
@@ -81,6 +92,6 @@ pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete'
 })
 
 // if none of the above states are matched, use this as the fallback
-$urlRouterProvider.otherwise('/app/intro');
+$urlRouterProvider.otherwise('/app/map');
 
 });

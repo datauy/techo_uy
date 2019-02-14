@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Educación - ALTEC",
+  "short_name": "Educación - ALTEC",
+  "version": "edu.altec.educacion",
+  "description": "ANEP",
+  "author": "DATA Uy",
+  "icons": [
+    {
+      "src": "resources/ios/icon/icon-small@3x.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}
