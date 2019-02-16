@@ -9,6 +9,7 @@ input[type="text"]{
 body {
   height: 100%;
   width: 100%;
+	color: #fff;
 }
 
 .scroll, .angular-leaflet-map {
@@ -1192,5 +1193,55 @@ margin-top: 10px;
 .notification_item .actions {
   float: right;
   margin-top: -30px;
+
+}
+
+/*GENERAL (revisar)*/
+label,
+ion-select {
+	float: left;
+}
+/***************** FORM *************/
+#filters {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #1e242c;
+}
+.scroll-content {
+  position: relative;
+}
+.list {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.arrow-icon {
+	float: right;
+	width: 24px;
+	height: 24px;
+}
+.arrow-up{
+  background-image:    url(./img/ic-chevron-blue.svg), none;
+	-ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
+}
+.arrow-down{
+  background-image:    url(./img/ic-chevron-white.svg), none;
+}
+.item {
+	background-color: #1e242c;
+	color: #ffff;
+}
+.filter-header {
+	background-color: rgba(255,255,255,0.09);
+}
+.item.active,
+.item-radio.item-content,
+.item-radio input:checked + .radio-content .item-content {
+	background: none;
+}
+.item-radio {
 
 }

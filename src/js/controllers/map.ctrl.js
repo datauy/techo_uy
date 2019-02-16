@@ -1044,6 +1044,22 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
           };
 
+      /** FILTERS JS */
+      $scope.submitFilters = function(){
+        console.log($scope.filters);
+        $scope.GetData($scope.filters);
+      };
+      $scope.toggleGroup = function(group) {
+        console.log(group);
+        if ($scope.isGroupShown(group)) {
+          $scope.shownGroup = null;
+        } else {
+          $scope.shownGroup = group;
+        }
+      };
+      $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+      };
   }
 
 ]);

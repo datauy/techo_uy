@@ -1,4 +1,4 @@
-<ion-view title="{{AppName}}-Map" hide-nav-bar="true">
+<ion-view title="{{AppName}}" hide-nav-bar="true">
 
 <ion-nav-title>
 </ion-nav-title>
@@ -9,9 +9,9 @@
 <!--<div class="top-bar-imm">
   <div class="white-bar-imm"></div>
   <div class="icon-imm-top"/></div>
-</div>-->
-
-
+</div>
+-->
+<div ng-include src="'templates/filters.html'" id="filters"></div>
 <ion-content data-tap-disabled="true">
   <leaflet defaults="map.defaults" center="map.center" markers="map.markers" ng-if="map"></leaflet>
 </ion-content>
