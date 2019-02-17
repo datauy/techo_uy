@@ -1,5 +1,5 @@
 {
-  "name": "tomamos_una",
+  "name": "techo_uy",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.1.0"
   },
@@ -12,9 +12,9 @@
     "Proj4Leaflet": "proj4leaflet#~0.7.2"
   },
   "version": "1.0.0",
-  "homepage": "http://tomamosuna.thor.datauy.org",
+  "homepage": "http://techouy.freyja.datauy.org/",
   "authors": [
-    "Pablo Pignolo <pablo.pignolo@gmail.com"
+    "DATA Uy"
   ],
   "license": "MIT",
   "ignore": [
@@ -25,13 +25,13 @@
     "test",
     "tests"
   ],
-  "description": "Mobile APP for Tomamos Una website",
+  "description": "Techo Uy",
   "main": "app.js",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "im",
+    "techo",
     "data"
   ],
   "resolutions": {

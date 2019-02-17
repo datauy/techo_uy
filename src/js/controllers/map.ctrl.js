@@ -74,7 +74,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       }else{
         $scope.set_offline_user();
       }
-      document.getElementById("foot_bar").style.display = "block";
       if(ConnectivityService.isOnline()){
         $scope.create_online_map();
       }
@@ -151,7 +150,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       //LocationsService.initial_lat = $scope.report.lat;
       //LocationsService.initial_lng = $scope.report.lon;
       ModalService.checkNoModalIsOpen();
-      document.getElementById("foot_bar").style.display = "block";
       document.getElementById("spinner-inside-modal").style.display = "none";
       //$scope.addReportsLayer();
     }else{
@@ -288,7 +286,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     }
 
     $scope.hide_special_divs = function(){
-      document.getElementById("user-options-menu").style.display="none";
     }
 
     $scope.close_report_detail_modal = function(){
@@ -476,7 +473,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     };
 
     $scope.user_options = function(){
-      var menu = document.getElementById("user-options-menu");
+      /*var menu = document.getElementById("user-options-menu");
       if(menu.style.display=="block"){
         menu.style.display = "none";
       }else{
@@ -489,22 +486,22 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           //Está logueado
           $scope.show_user_menu();
         }
-      }
+      }*/
     }
 
     $scope.show_anonymous_menu = function(){
-      var menu = document.getElementById("user-options-menu");
+      /*var menu = document.getElementById("user-options-menu");
       var html = "<div id='auth_options'><div class='nonauth-link' ng-click='show_login_modal()'>Iniciar sesión</div>";
       html = html + "<div class='nonauth-link' ng-click='show_sign_up_modal()'>Registrarse</div></div>";
       menu.innerHTML = html;
       $compile(menu)($scope); //<---- recompilation
       menu.style.height = '120px';
       menu.style.width = '150px';
-      menu.style.display = "block";
+      menu.style.display = "block";*/
     }
 
     $scope.show_user_menu = function(){
-      var menu = document.getElementById("user-options-menu");
+      /*var menu = document.getElementById("user-options-menu");
       var html = UserService.name + "<div id='auth_options'><div class='user-logged-link' ng-click='show_edit_profile_modal()'>Mi perfil</div>";
       //html = html + "<div class='user-logged-link' ng-click='change_password()'>Cambiar contraseña</div>";
       html = html + "<div class='user-logged-link' ng-click='sign_out()'>Cerrar sesión</div></div>";
@@ -512,7 +509,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       $compile(menu)($scope); //<---- recompilation
       menu.style.height = '220px';
       menu.style.width = '200px';
-      menu.style.display = "block";
+      menu.style.display = "block";*/
     };
 
     $scope.create_field_array = function(name,type,value){
@@ -614,7 +611,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       DBService.eraseUser();
       document.getElementById("spinner").style.display = "none";
       $scope.set_user_picture(0);
-      document.getElementById("user-options-menu").style.display="none";
+      /*document.getElementById("user-options-menu").style.display="none";*/
     }
 
     $scope.show_edit_profile_modal = function(){
@@ -645,9 +642,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 //focusFirstInput: true
               }).then(function(modal) {
                   document.getElementById("spinner").style.display = "none";
-                  document.getElementById("user-options-menu").style.display="none";
                   ModalService.activeModal = modal;
-                  document.getElementById("foot_bar").style.display = "none";
                   ModalService.activeModal.show();
                   SemaphoreService.makeAvailableAgain("open-modal");
               });
@@ -659,9 +654,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               //focusFirstInput: true
             }).then(function(modal) {
                 document.getElementById("spinner").style.display = "none";
-                document.getElementById("user-options-menu").style.display="none";
                 ModalService.activeModal = modal;
-                document.getElementById("foot_bar").style.display = "none";
                 ModalService.activeModal.show();
                 SemaphoreService.makeAvailableAgain("open-modal");
             });
@@ -690,7 +683,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
     $scope.close_edit_profile_modal = function(){
       //Cargar el modal con la info del usuario logueado y con el submit a update_user
-      document.getElementById("foot_bar").style.display = "block";
       ModalService.checkNoModalIsOpen();
     }
 
@@ -798,7 +790,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               $scope.hide_special_divs();
               ModalService.activeModal = modal;
               SemaphoreService.makeAvailableAgain("open-modal");
-              document.getElementById("foot_bar").style.display = "none";
               ModalService.activeModal.show();
           });
       }
@@ -809,7 +800,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     }
 
     $scope.close_login_modal = function(){
-      document.getElementById("foot_bar").style.display = "block";
       ModalService.checkNoModalIsOpen();
     }
 
@@ -836,7 +826,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 $scope.hide_special_divs();
                 ModalService.activeModal = modal;
                 SemaphoreService.makeAvailableAgain("open-modal");
-                document.getElementById("foot_bar").style.display = "none";
                 ModalService.activeModal.show();
             });
         }else{
@@ -849,7 +838,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 $scope.hide_special_divs();
                 ModalService.activeModal = modal;
                 SemaphoreService.makeAvailableAgain("open-modal");
-                document.getElementById("foot_bar").style.display = "none";
                 ModalService.activeModal.show();
             });
         }
@@ -858,7 +846,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     }
 
     $scope.close_sign_up_modal = function(){
-      document.getElementById("foot_bar").style.display = "block";
       ModalService.checkNoModalIsOpen();
     }
 
