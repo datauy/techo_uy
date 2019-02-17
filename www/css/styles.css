@@ -1,6 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
   margin: 0px;
   padding: 0px;
   font-family: Montserrat, sans-serif;
   line-height: 0;
+  overflow-y: scroll;
+}
+
+.has-header {
+  top: 26px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #0092dd;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px;
+  line-height: 24px;
+  font-family: Montserrat, sans-serif;
+
+}
+h3 {
+  color: #1cc7bd;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Montserrat, sans-serif;
 }

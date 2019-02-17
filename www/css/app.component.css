@@ -1,11 +1,12 @@
 .main-header {
   background-color: #0092dd;
+  border: none;
   height: 70px;
 }
 
 .logo-container {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 19px;
+  transform: translate( 0% , 18%);
 }
 
 img#logo {
