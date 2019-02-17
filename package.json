@@ -1,12 +1,12 @@
 {
-  "name": "pmb-mobile",
-  "version": "0.0.2",
-  "description": "Mobile APP for PorMiBarrio website",
-  "author": "DATAUY.ORG <contacto@datauy.org>",
+  "name": "Techo Uy",
+  "version": "0.0.1",
+  "description": "Techo Org",
+  "author": "DATAUY.ORG <devops@datauy.org>",
   "license": "OpenSource",
   "repository": {
     "type": "git",
-    "url": "https://github.com/datauy/PorMiBarrioAPPs/"
+    "url": "https://github.com/datauy/techo_uy"
   },
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"

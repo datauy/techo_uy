@@ -1441,3 +1441,46 @@ changed
 [15:05:16] [1mwww/img/icon-camera-black.png[22m changed
 [15:05:16] [1mwww/img/icon-user-anonymous.png[22m changed
 [15:05:16] [1mwww/EPSG32721.js[22m changed
+[2K[GThe Ionic CLI has an update available ([36m3.20.0[39m => [36m4.10.3[39m)!
+[2K[G
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m [33mNo write permissions for global [1mnode_modules[22m--automatic CLI updates are [39m
+
+       disabled.
+       To fix, see [1mhttps://docs.npmjs.com/getting-started/fixing-npm-permissions[22m
+       
+       Or, install the CLI update manually:
+       
+       [32mnpm i -g ionic@latest[39m
+       
+
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nolivereload[39m option has been deprecated. Please use 
+       [32m--no-livereload[39m.
+[2K[G[2m[[22m[33m[1m[40mWARN[49m[22m[39m[2m][22m The [32m--nobrowser[39m option has been deprecated. Please use [32m--no-open[39m.
+[2K[GStarting server (address: [1m0.0.0.0[22m, port: [1m8105[22m, dev server port: [1m53707[22m) - Ctrl+C 
+to cancel
+[2K[GProxy created [1m/im[22m => [1mhttp://desa.imm.gub.uy:8080[22m
+[2K[GProxy created [1m/backend[22m => [1mhttp://backend.educacion.thor.datauy.org[22m
+[2K[GProxy created [1m/ckan[22m => 
+[1mhttp://datos.techo.org/api/3/action/datastore_search?resource_id=7fe2c833-e16a-4b27-be40-9e8557fb439a&limit=589[22m
+[2K[G[2m[[22m[32m[1m[40mOK[49m[22m[39m[2m][22m Development server running!
+     Local: [1mhttp://localhost:8105[22m
+     External: [1mhttp://66.175.212.192:8105[22m
+     DevApp: [1meducacion_altec@8105[22m on [1mfreyja[22m
+
+[12:36:19] [1mwww/dist/templates.js[22m changed
+[12:36:20] [1mwww/dist/app.js[22m changed
+[12:36:20] [1mwww/dist/css/ionic.app.css[22m changed
+[12:36:21] [1mwww/dist/css/ionic.app.min.css[22m changed
+[12:48:05] [1mwww/dist/templates.js[22m changed
+[12:48:06] [1mwww/dist/app.js[22m changed
+[12:48:06] [1mwww/dist/css/ionic.app.css[22m changed
+[12:48:06] [1mwww/dist/css/ionic.app.min.css[22m changed
+[12:50:46] [1mwww/dist/templates.js[22m changed
+[12:50:47] [1mwww/dist/app.js[22m changed
+[12:50:47] [1mwww/dist/css/ionic.app.css[22m changed
+[12:50:48] [1mwww/dist/css/ionic.app.min.css[22m changed
+[12:52:01] [1mwww/dist/templates.js[22m changed
+[12:52:02] [1mwww/dist/app.js[22m changed
+[12:52:02] [1mwww/dist/css/ionic.app.css[22m changed
+[12:52:03] [1mwww/dist/app.js[22m changed
+[12:52:03] [1mwww/dist/css/ionic.app.min.css[22m changed
