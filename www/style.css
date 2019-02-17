@@ -10,6 +10,8 @@ body {
   height: 100%;
   width: 100%;
 	color: #fff;
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 14px !important;
 }
 
 .scroll, .angular-leaflet-map {
@@ -129,7 +131,6 @@ body {
 .foot-bar{
   bottom: 0%;
   position: absolute;
-  height: 105px;
   width: 100%;
 }
 
@@ -674,8 +675,8 @@ body {
   border-color: #ffffff;
   border-width: 1px;
   border-style: solid;
-  width:100%;
-  height: 35px;
+	width: 100%;
+	height: 48px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border-radius: 7px 7px 7px 7px;
   border-radius: 7px 7px 7px 7px;
@@ -1201,19 +1202,47 @@ label,
 ion-select {
 	float: left;
 }
+/************MAIN MENU***********/
+#main-menu {
+	position: absolute;
+	height: 72px;
+	width: 100%;
+	background-color: #326884;
+}
 /***************** FORM *************/
 #filters {
   float: left;
-  width: 30%;
+  width: 360px;
   height: 100%;
   background-color: #1e242c;
+	top: 72px;
+	position: relative;
+}
+.section-title {
+	font-weight: 600;
+	width: 100%;
+	float: left;
+	padding: 24px 0 16px;
+  border-top: 1px solid #5f6978;
+  margin-top: 8px;
+}
+.section-title.first {
+	padding-top: 0;
+	border: none;
+	margin-top: 0;
+}
+.section-main {
+	font-weight: 600;
+	max-width: 80%;
+	float: left;
 }
 .scroll-content {
   position: relative;
 }
 .list {
-  max-height: 80vh;
+  max-height: calc(100vh - 320px);;
   overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .arrow-icon {
@@ -1233,15 +1262,159 @@ ion-select {
 .item {
 	background-color: #1e242c;
 	color: #ffff;
+	border: none;
+	font-size: 14px;
+	padding: 8px 24px;
 }
 .filter-header {
-	background-color: rgba(255,255,255,0.09);
+	background-color: #2a323d;
+	height: 48px;
+	border-top: 1px solid #5f6978;
 }
-.item.active,
-.item-radio.item-content,
+.item.active {
+	background: none;
+	border-top: 1px solid #5f6978;
+}
+.item-radio .item-content,
 .item-radio input:checked + .radio-content .item-content {
 	background: none;
 }
+.filter-totals {
+	height: 80px;
+	padding: 24px;
+}
+.filter-title {
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #8894a3;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: 2px;
+	width: 40%;
+	float: left;
+}
+#filter-total {
+	font-size: 32px;
+  line-height: 1;
+  float: right;
+  color: #ffffff;
+}
+.filter-zona {
+	width: 100%;
+	float: left;
+	height: 148px;
+	background-color: #2a323d;
+	border-top: 1px solid #5f6978;
+}
+.item-select {
+	width: 100%;
+	float: left;
+}
+.item-input {
+	padding: 19px 0 8px 24px;
+	width: 100%;
+	border: none;
+	border-top: 1px solid #5f6978;
+}
+.select-list {
+	width: 100%;
+	float: left;
+	margin: 8px 0 32px 0;
+	height: 40px;
+	color: #8894a3;
+	font-size: 14px;
+	line-height: 1.43;
+}
+.item-checkbox,
 .item-radio {
+	width: 100%;
+}
+.item-checkbox,
+.item-radio .item-content {
+	padding-right: 0;
+  padding-left: 34px;
+}
 
+.item-radio .radio-icon {
+	right: inherit;
+	border: 1px solid #5f6978;
+	width: 18px;
+	height: 18px;
+	border-radius: 4px;
+	padding: 0;
+	margin-top: 17px;
+}
+.item-radio .radio-icon::before {
+	margin-top: 0;
+}
+.item-checkbox .checkbox {
+	left: 0;
+	padding: 0;
+}
+.ion-checkmark::before {
+	width: 16px;
+	height: 16px;
+	border-color: #5f6978;
+	border-radius: 4px;
+	background-color: #1cc7bd;
+	display: inherit;
+	font-size: 11px;
+	padding: 2px 4px;
+}
+.checkbox input, .checkbox-icon {
+	padding-top: 13px;
+}
+.checkbox .checkbox-icon::before {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #5f6978;
+	border-radius: 4px;
+	background: transparent;
+}
+.checkbox input:checked + .checkbox-icon::before {
+	background: #1cc7bd;
+	border: none;
+}
+input:checked + .checkbox-icon::after {
+	top: 17px;
+	left: 4px;
+	width: 9px;
+	height: 5px;
+}
+.toggle .track {
+	width: 32px;
+	height: 12px;
+	border: none;
+	border-radius: 8px;
+	background-color: #2a323d;
+}
+.toggle .handle {
+	background-color: #8894a3;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+.item-toggle .toggle {
+	right: 8px;
+}
+.toggle.toggle-calm input:checked + .track {
+	background-color: rgba(28, 199, 189, 0.4);
+}
+.toggle input:checked + .track .handle {
+	background-color: #1cc7bd;
+}
+.section-title .item {
+	padding: 8px 0;
+}
+.section-title span {
+	max-width: 80%;
+	float: left;
+}
+.form-actions {
+	padding: 12px 24px;
+	border-top: 1px solid #5f6978;
+}
+.button.button-full {
+	margin: 12px 0;
+	float: left;
 }
