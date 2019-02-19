@@ -1215,7 +1215,6 @@ ion-select {
   width: 360px;
   height: 100%;
   background-color: #1e242c;
-	top: 72px;
 	position: relative;
 }
 .section-title {
@@ -1235,12 +1234,13 @@ ion-select {
 	font-weight: 600;
 	max-width: 80%;
 	float: left;
+	padding-top: 4px;
 }
 .scroll-content {
   position: relative;
 }
 .list {
-  max-height: calc(100vh - 320px);;
+  max-height: calc(100vh - 308px);;
   overflow-y: auto;
 	overflow-x: hidden;
 }

@@ -3,13 +3,11 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Montserrat, sans-serif;
-  line-height: 0;
   overflow-y: scroll;
 }
 
 .has-header {
-  top: 26px;
+  top: 70px;
 }
 
 h1 {

@@ -5,30 +5,60 @@
 }
 
 .logo-container {
-  padding-left: 19px;
-  transform: translate( 0% , 18%);
+  width: 25%;
+	transform: none;
+	padding: 1% 19px;
 }
-
+.navbar-toggler {
+	display: none;
+}
 img#logo {
   height: 37.8px;
 }
-
-.nav-item {
-  padding-left: 10px;
+.navbar {
+	width: 75%;
 }
-
+.navbar-nav {
+  float: left;
+}
+.navbar-nav.navbar-right {
+	float: right;
+}
+.nav-item {
+	float: left;
+}
+.nav-item {
+  padding: 10px;
+}
 .nav-link {
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  color: #c8e0e3 !important;
-  line-height: 70px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 40px;
+  letter-spacing: 1px;
 }
-
-.icon-background {
-  color: white;
+.nav-icon {
+  padding: 16px;
+  float: right;
 }
-
 .icon-color {
-  color: #0092dd;
+  width: 32px;
+  height: 32px;
+  float: left;
+}
+.fa-facebook {
+  background-image: url(/img/ic-facebook.svg), none;
+}
+.fa-instagram {
+  background-image: url(/img/ic-instagram.svg), none;
+}
+.fa-linkedin {
+  background-image: url(/img/ic-linkedin.svg), none;
+}
+.fa-twitter {
+  background-image: url(/img/ic-twitter.svg), none;
+}
+.fa-youtube-play {
+  background-image: url(/img/ic-youtube.svg), none;
 }
