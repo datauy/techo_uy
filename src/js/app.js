@@ -80,6 +80,39 @@ pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete'
   }
 })
 
+.state('app.contenidos', {
+  cache: false,
+  url: "/contenidos",
+  views: {
+    'menuContent' :{
+      templateUrl: "templates/static/press-room.component.html",
+      controller : "StaticController"
+    }
+  }
+})
+
+.state('app.metodologia', {
+  cache: false,
+  url: "/metodologia",
+  views: {
+    'menuContent' :{
+      templateUrl: "templates/static/methodology.component.html",
+      controller : "StaticController"
+    }
+  }
+})
+
+.state('app.contacto', {
+  cache: false,
+  url: "/contacto",
+  views: {
+    'menuContent' :{
+      templateUrl: "templates/static/contact.component.html",
+      controller : "StaticController"
+    }
+  }
+})
+
 .state('app.map', {
     cache: false,
     url: "/map",
