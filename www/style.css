@@ -870,28 +870,6 @@ body {
 .button-clear.button-clear{
   color: #000000;
 }
-
-.popup-sub-title{
-  font-size: 14px;
-  color: #FFFFFF;
-  text-align: left;
-}
-
-.popup-title{
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.popup-container .popup{
-  background-color: rgba(0, 0, 0, 0.8)
-}
-
-.popup-body{
-  font-size: 14px;
-  color: #FFFFFF;
-  text-align: left;
-}
-
 #comment_container input[type="checkbox"]{
   width: auto;
 }
