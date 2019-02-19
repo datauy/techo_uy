@@ -382,8 +382,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     pointsArray.forEach(function(point,key){
       point = point.trim();
       var coordinatesArray = point.split(" ");
-      var lat = coordinatesArray[0];
-      var lon = coordinatesArray[1];
+      var lat = coordinatesArray[1];
+      var lon = coordinatesArray[0];
       var newCoordinates = PinService.convertLatLongProj(lat,lon,$scope);
       var latlon = [newCoordinates.lat, newCoordinates.lng];
       polygonPointsCoordinates.push(latlon);
@@ -391,13 +391,45 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     return polygonPointsCoordinates;
   }
 
+  $scope.getOnlyCoordinatesMultiPolygon = function(wkt_geom){
+    var all_polygons = new Array();
+    wkt_geom = wkt_geom.replace("MultiPolygon (((","");
+    wkt_geom = wkt_geom.replace(")))","");
+    var polygons = wkt_geom.split(")),((");
+    polygons.forEach(function(polygon,key){
+      polygon = polygon.replace("((","");
+      polygon = polygon.replace("))","");
+      var pointsArray = polygon.split(",");
+      var polygonPointsCoordinates = new Array();
+      pointsArray.forEach(function(point,key2){
+        point = point.trim();
+        var coordinatesArray = point.split(" ");
+        var lat = parseFloat(coordinatesArray[1]);
+        var lon = parseFloat(coordinatesArray[0]);
+        /*var newCoordinates = PinService.convertLatLongProj(lat,lon,$scope);
+        var latlon = [newCoordinates.lat, newCoordinates.lng];*/
+        if(!isNaN(lat) && !isNaN(lon)){
+          var latlon = [lat, lon];
+          polygonPointsCoordinates.push(latlon);
+        }
+      });
+      all_polygons.push(polygonPointsCoordinates);
+    });
+    return all_polygons;
+  }
+
   $scope.getTypeOfMapObject = function(wkt_geom){
-    if(wkt_geom.startsWith("MultiPolygon")){
-      return "MultiPolygon";
+    if(wkt_geom){
+      if(wkt_geom.startsWith("MultiPolygon")){
+        return "MultiPolygon";
+      }
+      if(wkt_geom.startsWith("Polygon")){
+        return "Polygon";
+      }
+    }else{
+      return "Unknown";
     }
-    if(wkt_geom.startsWith("Polygon")){
-      return "Polygon";
-    }
+
   }
 
     //PARA CONTROLAR EL ENTER EN ALGUNOS FORMS
@@ -1055,20 +1087,24 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
         $scope.updatePins = function() {
           leafletData.getMap().then(function(map) {
-            console.log('UPDATE PINS');
             if ( $scope.asentamientos_layers.length > 0 ){
               $scope.removeAllPins();
               $scope.asentamientos_layers = [];
             }
-            console.log(CkanService.asentamientosActivos);
             CkanService.asentamientosActivos.forEach(function(feature){
               if($scope.getTypeOfMapObject(feature.wkt_geom)=="Polygon"){
                 var latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
-                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.NOM_AST + " - " + feature.COD_AST + " - ").addTo(map);
+                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.nombre + " - " + feature.id2018).addTo(map);
+                $scope.asentamientos_layers[feature.id2018] = polygon;
               }
               else if($scope.getTypeOfMapObject(feature.wkt_geom)=="MultiPolygon"){
+                var latlngs = $scope.getOnlyCoordinatesMultiPolygon(feature.wkt_geom);
+                if(latlngs.length==1){
+                  latlngs = latlngs[0];
+                }
+                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.nombre + " - " + feature.id2018).addTo(map);
+                $scope.asentamientos_layers[feature.id2018] = polygon;
               }
-              $scope.asentamientos_layers[feature.COD_AST] = polygon;
               //console.log(feature);
             });
             document.getElementById("spinner").style.display = "none";
