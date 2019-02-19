@@ -1,18 +1,19 @@
 {
   "name": "techo_uy",
-  "app_id": "ee41f0b9",
+  "integrations": {},
+  "type": "ionic1",
   "proxies": [
-    {
-      "path": "/im",
-      "proxyUrl": "http://desa.imm.gub.uy:8080"
-    },
-    {
-      "path": "/backend",
-      "proxyUrl": "http://backend.educacion.thor.datauy.org"
-    },
     {
       "path": "/ckan",
       "proxyUrl": "http://datos.techo.org/api/3/action/datastore_search?resource_id=7fe2c833-e16a-4b27-be40-9e8557fb439a&limit=589"
+    },
+    {
+      "path": "/ckanSql",
+      "proxyUrl": "http://datos.techo.org/api/3/action/datastore_search_sql"
+    },
+    {
+      "path": "/ckanData",
+      "proxyUrl": "http://datos.techo.org/api/3/action/datastore_search"
     }
   ],
   "gulpStartupTasks": [
@@ -31,6 +32,5 @@
       "version": "12.41.296.5"
     }
   ],
-  "integrations": {},
-  "type": "ionic1"
+  "id": "ee41f0b9"
 }

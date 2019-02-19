@@ -65,6 +65,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     $scope.user_cached_image = "./img/icon-user-anonymous.png";
     $scope.one_value_popup = null;
     $scope.myIntervals = new Array();
+    $scope.filters = {};
 
     $scope.$on("$ionicView.beforeEnter", function() {
       ModalService.checkNoModalIsOpen();
@@ -112,7 +113,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           tileLayer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
           minZoom: 1,
           maxZoom: 18,
-          zoomControlPosition: 'topleft',
+          zoomControlPosition: 'bottomright',
         },
         markers: {},
         events: {
@@ -340,6 +341,15 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       }
     }
 
+    $scope.removeAllPins = function() {
+      leafletData.getMap().then(function(map) {
+        var mapBounds = map.getBounds();
+          $scope.asentamientos_layers.forEach(function(layer,key){
+                map.removeLayer(layer);
+          })
+      })
+    }
+
     $scope.hideOffScreenPins = function() {
       /*leafletData.getMap().then(function(map) {
         var mapBounds = map.getBounds();
@@ -357,31 +367,10 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     }
 
     $scope.loadPinsLayer = function(){
-        document.getElementById("spinner").style.display = "block";
-        leafletData.getMap().then(function(map) {
-          CkanService.getAllPolygons().then(function (response) {
-            if(CkanService.lastPinsResponse==null || (CkanService.lastPinsResponse && CkanService.lastPinsResponse!=response)){
-              if($scope.asentamientos_layers){
-                $scope.asentamientos_layers.forEach(function(layer,key){
-                  map.removeLayer(layer);
-                })
-              }
-              CkanService.lastPinsResponse = response.data;
-              console.log(CkanService.lastPinsResponse);
-              CkanService.lastPinsResponse.result.records.forEach(function(feature){
-                if($scope.getTypeOfMapObject(feature.wkt_geom)=="Polygon"){
-                  var latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
-                  var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.NOM_AST + " - " + feature.COD_AST + " - " + feature.wkt_geom).addTo(map);
-                }else if($scope.getTypeOfMapObject(feature.wkt_geom)=="MultiPolygon"){
-                }
-                //$scope.asentamientos_layers[feature.COD_AST] = feature;
-                //console.log(feature);
-              });
-              document.getElementById("spinner").style.display = "none";
-              //$scope.hideOffScreenPins();
-            }
-          });
-
+      document.getElementById("spinner").style.display = "block";
+        CkanService.getAllData('a3c8a073-ce32-434b-a751-f35c7b750968').then(function (response) {
+          CkanService.asentamientosActivos = response;
+          $scope.updatePins();
         });
     }
 
@@ -1031,22 +1020,61 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
           };
 
-      /** FILTERS JS */
-      $scope.submitFilters = function(){
-        console.log($scope.filters);
-        $scope.GetData($scope.filters);
-      };
-      $scope.toggleGroup = function(group) {
-        console.log(group);
-        if ($scope.isGroupShown(group)) {
-          $scope.shownGroup = null;
-        } else {
-          $scope.shownGroup = group;
-        }
-      };
-      $scope.isGroupShown = function(group) {
-        return $scope.shownGroup === group;
-      };
+        /** FILTERS JS */
+        $scope.submitFilters = function(){
+          console.log('Va a getData');
+          /*CkanService.getDataById("1003002").then(function (resp) {
+            console.log("BYID");
+            console.log(resp);
+          });
+          CkanService.queryData('SELECT * FROM "a3c8a073-ce32-434b-a751-f35c7b750968";').then(function (resp) {
+            console.log("BYQUEY");
+            console.log(resp);
+          });*/
+          CkanService.getData($scope.filters).then(function (asentamientos) {
+            console.log('Entra a then');
+            CkanService.asentamientosActivos = asentamientos;
+            document.getElementById("spinner").style.display = "block";
+            $scope.updatePins();
+            document.getElementById("filter-total").innerHTML = asentamientos.length;
+            //reload PinS
+          });
+        };
+
+        $scope.toggleGroup = function(group) {
+          console.log(group);
+          if ($scope.isGroupShown(group)) {
+            $scope.shownGroup = null;
+          } else {
+            $scope.shownGroup = group;
+          }
+        };
+        $scope.isGroupShown = function(group) {
+          return $scope.shownGroup === group;
+        };
+
+        $scope.updatePins = function() {
+          leafletData.getMap().then(function(map) {
+            console.log('UPDATE PINS');
+            if ( $scope.asentamientos_layers.length > 0 ){
+              $scope.removeAllPins();
+              $scope.asentamientos_layers = [];
+            }
+            console.log(CkanService.asentamientosActivos);
+            CkanService.asentamientosActivos.forEach(function(feature){
+              if($scope.getTypeOfMapObject(feature.wkt_geom)=="Polygon"){
+                var latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
+                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.NOM_AST + " - " + feature.COD_AST + " - ").addTo(map);
+              }
+              else if($scope.getTypeOfMapObject(feature.wkt_geom)=="MultiPolygon"){
+              }
+              $scope.asentamientos_layers[feature.COD_AST] = polygon;
+              //console.log(feature);
+            });
+            document.getElementById("spinner").style.display = "none";
+            //$scope.hideOffScreenPins();
+          });
+        };
   }
 
 ]);

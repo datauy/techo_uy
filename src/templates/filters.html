@@ -38,7 +38,7 @@
       <i class="icon arrow-icon" ng-class="isGroupShown('viviendas') ? 'arrow-up' : 'arrow-down'"></i>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
-    <div class="section-title">Número estimado de Viviendas</div>
+    <div class="section-title first">Número estimado de Viviendas</div>
     <ion-checkbox ng-model="filters.vivendas_no.uno">Menos de 50</ion-checkbox>
     <ion-checkbox ng-model="filters.vivendas_no.dos">Entre 50 y 100</ion-checkbox>
     <ion-checkbox ng-model="filters.vivendas_no.tres">Entre 100 y 200</ion-checkbox>
@@ -81,7 +81,7 @@
       <i class="icon arrow-icon" ng-class="isGroupShown('entorno') ? 'arrow-up' : 'arrow-down'"></i>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
-    <div class="section-title">Estado general de las calles</div>
+    <div class="section-title first">Estado general de las calles</div>
     <ion-checkbox ng-model="filters.entorno_calles.pavimento">Con pavimento</ion-checkbox>
     <ion-checkbox ng-model="filters.entorno_calles.parcial">Parcialmente pavimientada</ion-checkbox>
     <ion-checkbox ng-model="filters.entorno_calles.balastro">Balastro o similares</ion-checkbox>
