@@ -24,38 +24,53 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
       },
       getData: function (filters) {
         var query = "SELECT * from ";
-        if (filters.a_o.uno) {
+        if (filters.a_o && filters.a_o.uno) {
           query += '"a3c8a073-ce32-434b-a751-f35c7b750968" ';
         }
         else {
+          //Fallback 2018
           query += '"a3c8a073-ce32-434b-a751-f35c7b750968" ';
         }
         // TODO: Ver que haya filtros o devolver todo
         console.log(filters);
         if (Object.keys(filters).length) {
           query += 'where ';
+          queryArr = [];
           var asentamientosActivos = [];
           for( var filterGroup in filters ){
             if(!filters.hasOwnProperty(filterGroup)) continue;
             switch (filterGroup) {
               case 'tipo':
-              if (filters.tipo.urbano && filters.tipo.rural ) continue;
-              // TODO: Agregar campo a planilla
-              else if (filters.tipo.urbano) query += "tipo_asentamiento = 1 ";
-              else if (filters.tipo.rural) query += "tipo_asentamiento = 2 ";
+                if (filters.tipo.urbano && filters.tipo.rural ) continue;
+                // TODO: Agregar campo a planilla
+                else if (filters.tipo.urbano) queryArr.push("tipo_asentamiento = 1");
+                else if (filters.tipo.rural) queryArr.push("tipo_asentamiento = 2");
               break;
-              /*case 'viviendas':
-              var viviendasQuery = '';
-              for( var viviendasFilter in filters.viviendas ){
-              var viviendasnum = '';
-              if ( viviendasFilter == 'no' ) {
-              if (filters.vivendas.no.uno) viviendasnum = ''
+              case 'vivendas_no':
+                var viviArr = [];
+                if (filters[filterGroup].uno) viviArr.push("nro_viviendas <= 50");
+                if (filters[filterGroup].dos) viviArr.push("nro_viviendas > 50 AND nro_viviendas <= 100");
+                if (filters[filterGroup].tres) viviArr.push("nro_viviendas > 100 AND nro_viviendas <= 200");
+                if (filters[filterGroup].cuatro) viviArr.push("nro_viviendas > 200");
+                queryArr.push(viviArr.join(' OR '));
+                break;
+              case 'p_techos_prec':
+              case 'p_paredes_prec':
+              case 'vivendas_suelos':
+              case 'p_contelect':
+              case 'p_c_drenaje':
+              var pArr = [];
+              if (filters[filterGroup].cuarenta) pArr.push(filterGroup+" <= 40");
+              if (filters[filterGroup].sesenta) pArr.push(filterGroup+" > 40 AND 60 <= "+filterGroup);
+              if (filters[filterGroup].cien) pArr.push(filterGroup+" > 60");
+              queryArr.push(pArr.join(' OR '));
               break;
               case 'entorno':
-              break;*/
+              break;
 
             }
           }
+          query += queryArr.join(' AND ');
         }
         //var resp = $http.post(ConfigService.ckanSQL, { headers: {'Authorization': 'd7e78b6e-3eed-4d69-8387-ab0196121a51'} });
         console.log('Query -> '+query);

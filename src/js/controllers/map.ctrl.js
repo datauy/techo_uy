@@ -66,6 +66,19 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     $scope.one_value_popup = null;
     $scope.myIntervals = new Array();
     $scope.filters = {};
+    $scope.astVulnera = {
+      //'0': { color: '#27BF00', name: 'Vulnerabilidad urbana baja' },
+      '0': { color: '#1cc7bd', name: 'Bajo' },
+      '1': { color: '#1cc7bd', name: 'Bajo' },
+      //'2': { color: '#A9CB00', name: 'Vulnerabilidad urbana media' },
+      '2': { color: '#0092dd', name: 'Mediano' },
+      '3': { color: '#0092dd', name: 'Mediano' },
+      //'4': { color: '#D87600', name: 'Vulnerabilidad urbana alta' },
+      '4': { color: '#feb429', name: 'Alto' },
+      '5': { color: '#feb429', name: 'Alto' },
+      //'6': { color: '#E50010', name: 'Vulnerabilidad urbana muy alta' }
+      '6': { color: '#c85757', name: 'Extremo' }
+    };
 
     $scope.$on("$ionicView.beforeEnter", function() {
       ModalService.checkNoModalIsOpen();
@@ -1067,9 +1080,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
             console.log('Entra a then');
             CkanService.asentamientosActivos = asentamientos;
             document.getElementById("spinner").style.display = "block";
-            $scope.updatePins();
-            document.getElementById("filter-total").innerHTML = asentamientos.length;
             //reload PinS
+            $scope.updatePins();
           });
         };
 
@@ -1092,21 +1104,45 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               $scope.asentamientos_layers = [];
             }
             CkanService.asentamientosActivos.forEach(function(feature){
+              var latlngs = {};
               if($scope.getTypeOfMapObject(feature.wkt_geom)=="Polygon"){
-                var latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
-                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.nombre + " - " + feature.id2018).addTo(map);
-                $scope.asentamientos_layers[feature.id2018] = polygon;
+                latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
+                //var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.nombre + " - " + feature.id2018).addTo(map);
+                //$scope.asentamientos_layers[feature.id2018] = polygon;
               }
               else if($scope.getTypeOfMapObject(feature.wkt_geom)=="MultiPolygon"){
-                var latlngs = $scope.getOnlyCoordinatesMultiPolygon(feature.wkt_geom);
+                latlngs = $scope.getOnlyCoordinatesMultiPolygon(feature.wkt_geom);
                 if(latlngs.length==1){
                   latlngs = latlngs[0];
                 }
-                var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup(feature.nombre + " - " + feature.id2018).addTo(map);
-                $scope.asentamientos_layers[feature.id2018] = polygon;
               }
+              //var astColor = '#b175fb';
+              var astColor = '#8894a3';
+              var astVulner = 'Neutro/NR';
+              if ( feature.vulnera_urb ) {
+                astColor = $scope.astVulnera[feature.vulnera_urb].color;
+                astvulner = $scope.astVulnera[feature.vulnera_urb].name;
+              }
+              var polygon = L.polygon(latlngs, {color: astColor}).bindPopup(
+                '<div class="popup-header">'+
+                  '<div class="popup-ast-nombre">'+feature.nombre +"</div>"+
+                  '<div class="popup-ast-nombre-otro">'+feature.nombre_otro +"</div>"+
+                '</div>'+
+                '<ul class="popup-body">'+
+                  '<li><label>Año de creación</label><div class="popup-value">'+
+                  feature.y_creacion+'<div class="popup-value"><li>'+
+                  '<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
+                  feature.vulnera_urb+'<div class="popup-value"><li>'+
+                  '<li><label>Número estimado de personas</label><div class="popup-value">'+
+                  feature.estim_personas_ajust+'<div class="popup-value"><li>'+
+                  '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
+                  feature.nro_viviendas+'<div class="popup-value"><li>'+
+                  '</ul><a class="popup-footer" href="#">Click para ver más detalles<a>'
+              ).addTo(map);
+              $scope.asentamientos_layers[feature.id2018] = polygon;
               //console.log(feature);
             });
+            document.getElementById("filter-total").innerHTML = CkanService.asentamientosActivos.length;
             document.getElementById("spinner").style.display = "none";
             //$scope.hideOffScreenPins();
           });

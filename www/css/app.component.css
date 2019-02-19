@@ -25,10 +25,11 @@ img#logo {
 	float: right;
 }
 .nav-item {
-	float: left;
+
 }
 .nav-item {
-  padding: 10px;
+  padding: 10px 16px;
+  float: left;
 }
 .nav-link {
   text-transform: uppercase;
@@ -39,7 +40,7 @@ img#logo {
   letter-spacing: 1px;
 }
 .nav-icon {
-  padding: 16px;
+  padding: 14px 8px;
   float: right;
 }
 .icon-color {

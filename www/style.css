@@ -1265,11 +1265,13 @@ ion-select {
 	border: none;
 	font-size: 14px;
 	padding: 8px 24px;
+	white-space: inherit;
 }
 .filter-header {
 	background-color: #2a323d;
 	height: 48px;
 	border-top: 1px solid #5f6978;
+	width: 100%;
 }
 .item.active {
 	background: none;
@@ -1417,4 +1419,11 @@ input:checked + .checkbox-icon::after {
 .button.button-full {
 	margin: 12px 0;
 	float: left;
+}
+.scroll-bar-indicator {
+	width: 8px;
+	background: #0092dd;
+}
+.scroll-view.scroll-y {
+	overflow-y: auto;
 }

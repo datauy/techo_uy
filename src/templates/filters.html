@@ -2,13 +2,31 @@
   <div class="filter-title">Cantidad de asentamientos</div>
   <div id="filter-total">327</div>
 </div>
+<!--<ion-scroll direction="y" scrollbar-x=0 style="width: 100%;">-->
 <ion-list>
   <ion-item class="filter-zona">
     <div class="filter-title">Zona</div>
     <select class="input select-list" ng-model="filters.depto">
         <option value="0" selected>Todos</option>
         <option value="1">Montevideo</option>
-        <option value="2">Otros</option>
+        <option value="2">Artigas</option>
+        <option value="3">Canelones</option>
+        <option value="4">Cerro Largo</option>
+        <option value="5">Colonia</option>
+        <option value="6">Durazno</option>
+        <option value="7">Flores</option>
+        <option value="8">Florida</option>
+        <option value="9">Lavalleja</option>
+        <option value="10">Maldonado</option>
+        <option value="11">Paysandú</option>
+        <option value="12">Río Negro</option>
+        <option value="13">Rivera</option>
+        <option value="14">Rocha</option>
+        <option value="15">Salto</option>
+        <option value="16">San José</option>
+        <option value="17">Soriano</option>
+        <option value="18">Tacuarembó</option>
+        <option value="19">Treinta y Tres</option>
     </select>
     <div class="filter-title">Filtros adicionales</div>
   </ion-item>
@@ -46,33 +64,33 @@
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
     <div class="section-title">Porcentaje de edificaciones con techos precarios</div>
-    <ion-checkbox ng-model="filters.vivendas_techo.cien">Más de la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_techo.sesenta">Aproximadamente la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_techo.cuarenta">Menos de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_techos_prec.cien">Más de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_techos_prec.sesenta">Aproximadamente la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_techos_prec.cuarenta">Menos de la mitad</ion-checkbox>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
     <div class="section-title">Porcentaje de edificaciones con paredes precarias</div>
-    <ion-checkbox ng-model="filters.vivendas_paredes.cien">Más del 60%</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_paredes.sesenta">Entre 40% y 60%</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_paredes.cuarenta">Menos del 40%</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_paredes_prec.cien">Más del 60%</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_paredes_prec.sesenta">Entre 40% y 60%</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_paredes_prec.cuarenta">Menos del 40%</ion-checkbox>
   </ion-item>
-  <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
+  <!--<ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
     <div class="section-title">Porcentaje de edificaciones con suelos precarios</div>
     <ion-checkbox ng-model="filters.vivendas_suelos.cien">Más de la mitad</ion-checkbox>
     <ion-checkbox ng-model="filters.vivendas_suelos.sesenta">Aproximadamente la mitad</ion-checkbox>
     <ion-checkbox ng-model="filters.vivendas_suelos.cuarenta">Menos de la mitad</ion-checkbox>
-  </ion-item>
+  </ion-item> -->
   <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
     <div class="section-title">Porcentaje de edificaciones con contador de consumo eléctrico</div>
-    <ion-checkbox ng-model="filters.vivendas_contador.cien">Más de la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_contador.sesenta">Aproximadamente la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_contador.cuarenta">Menos de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_contelect.cien">Más de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_contelect.sesenta">Aproximadamente la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_contelect.cuarenta">Menos de la mitad</ion-checkbox>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('viviendas')">
     <div class="section-title">Presencia de zanjas de drenaje por edificación</div>
-    <ion-checkbox ng-model="filters.vivendas_drenaje.cien">Más de la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_drenaje.sesenta">Aproximadamente la mitad</ion-checkbox>
-    <ion-checkbox ng-model="filters.vivendas_drenaje.cuarenta">Menos de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_c_drenaje.cien">Más de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_c_drenaje.sesenta">Aproximadamente la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_c_drenaje.cuarenta">Menos de la mitad</ion-checkbox>
   </ion-item>
 
   <ion-item class="filter-header" ng-click="toggleGroup('entorno')" ng-class="{active: isGroupShown('entorno')}">
@@ -106,7 +124,7 @@
     <ion-toggle ng-model="filters.entorno_bus" toggle-class="toggle-calm">Presencia de paradas de ómnibus</ion-toggle>
     </div>
     <div class="section-title">
-    <ion-toggle ng-model="filters.entorno_placas" toggle-class="toggle-calm">Presencia de placas con nombre<br>de calles</ion-toggle>
+    <ion-toggle ng-model="filters.entorno_placas" toggle-class="toggle-calm">Presencia de placas con nombre de calles</ion-toggle>
     </div>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
@@ -115,6 +133,7 @@
     <ion-checkbox ng-model="filters.arbolado.cincuenta">En menos de la mitad del asentamiento</ion-checkbox>
   </ion-item>
 </ion-list>
+<!--</ion-scroll>-->
 
 <div class="form-actions">
   <button class="button button-full button-positive" ng-click="submitFilters()">Filtrar</button>

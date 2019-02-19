@@ -21,3 +21,24 @@
   outline: 0;
   border: none;
 }
+.leaflet-popup-content,
+.leaflet-popup-content label {
+  color: #5f6978;
+  line-height: 1.33;
+  font-size: 12px;
+}
+.popup-ast-nombre {
+  color: #2a323d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.popup-value {
+  color: #2a323d;
+  font-weight: bold;
+}
+.popup-footer a {
+  color: #0092dd;
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+}
