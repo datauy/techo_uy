@@ -38,6 +38,7 @@ img#logo {
   color: #fff;
   line-height: 40px;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .nav-icon {
   padding: 14px 8px;
