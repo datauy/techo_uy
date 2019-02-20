@@ -68,16 +68,16 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     $scope.filters = {};
     $scope.astVulnera = {
       //'0': { color: '#27BF00', name: 'Vulnerabilidad urbana baja' },
-      '0': { color: '#1cc7bd', name: 'Bajo' },
-      '1': { color: '#1cc7bd', name: 'Bajo' },
+      '0': { color: '#1cc7bd', name: 'Bajo', icon: 'img/pin-green.svg' },
+      '1': { color: '#1cc7bd', name: 'Bajo', icon: 'img/pin-green.svg' },
       //'2': { color: '#A9CB00', name: 'Vulnerabilidad urbana media' },
-      '2': { color: '#0092dd', name: 'Mediano' },
-      '3': { color: '#0092dd', name: 'Mediano' },
+      '2': { color: '#0092dd', name: 'Mediano', icon: 'img/pin-blue.svg' },
+      '3': { color: '#0092dd', name: 'Mediano', icon: 'img/pin-blue.svg' },
       //'4': { color: '#D87600', name: 'Vulnerabilidad urbana alta' },
-      '4': { color: '#feb429', name: 'Alto' },
-      '5': { color: '#feb429', name: 'Alto' },
+      '4': { color: '#feb429', name: 'Alto', icon: 'img/pin-yellow.svg' },
+      '5': { color: '#feb429', name: 'Alto', icon: 'img/pin-yellow.svg' },
       //'6': { color: '#E50010', name: 'Vulnerabilidad urbana muy alta' }
-      '6': { color: '#c85757', name: 'Extremo' }
+      '6': { color: '#c85757', name: 'Extremo', icon: 'img/pin-red.svg' }
     };
 
     $scope.$on("$ionicView.beforeEnter", function() {
@@ -89,6 +89,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         $scope.set_offline_user();
       }
       if(ConnectivityService.isOnline()){
+        document.getElementById("spinner").style.display = "block";
         $scope.create_online_map();
       }
     });
@@ -98,9 +99,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       if(LocationsService.initial_lat!=""){
         MapService.centerMapOnCoords(LocationsService.initial_lat, LocationsService.initial_lng, 10);
       }else{
-        MapService.centerMapOnCoords(-34.901113, -56.164531, 10);
+        MapService.centerMapOnCoords(-32.462703, -55.701468, 7);
       }
-	document.getElementById("spinner").style.display = "none";
     });
 
 
@@ -356,7 +356,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
     $scope.removeAllPins = function() {
       leafletData.getMap().then(function(map) {
-        var mapBounds = map.getBounds();
           $scope.asentamientos_layers.forEach(function(layer,key){
                 map.removeLayer(layer);
           })
@@ -381,7 +380,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
     $scope.loadPinsLayer = function(){
       document.getElementById("spinner").style.display = "block";
-        CkanService.getAllData('a3c8a073-ce32-434b-a751-f35c7b750968').then(function (response) {
+        CkanService.getAllData('090341a0-dfba-43fd-bc82-da90394a883d').then(function (response) {
           CkanService.asentamientosActivos = response;
           $scope.updatePins();
         });
@@ -1067,17 +1066,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
         /** FILTERS JS */
         $scope.submitFilters = function(){
-          console.log('Va a getData');
-          /*CkanService.getDataById("1003002").then(function (resp) {
-            console.log("BYID");
-            console.log(resp);
-          });
-          CkanService.queryData('SELECT * FROM "a3c8a073-ce32-434b-a751-f35c7b750968";').then(function (resp) {
-            console.log("BYQUEY");
-            console.log(resp);
-          });*/
+          document.getElementById("spinner").style.display = "block";
           CkanService.getData($scope.filters).then(function (asentamientos) {
-            console.log('Entra a then');
             CkanService.asentamientosActivos = asentamientos;
             document.getElementById("spinner").style.display = "block";
             //reload PinS
@@ -1086,7 +1076,6 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         };
 
         $scope.toggleGroup = function(group) {
-          console.log(group);
           if ($scope.isGroupShown(group)) {
             $scope.shownGroup = null;
           } else {
@@ -1097,11 +1086,22 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           return $scope.shownGroup === group;
         };
 
+        $scope.mapIcon = function() {
+          return {
+            iconUrl: '',
+            iconSize:     [37, 41], // size of the icon
+            iconAnchor:   [18, 36], // point of the icon which will correspond to marker's location
+            popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+          };
+        }
+
         $scope.updatePins = function() {
           leafletData.getMap().then(function(map) {
             if ( $scope.asentamientos_layers.length > 0 ){
-              $scope.removeAllPins();
-              $scope.asentamientos_layers = [];
+              $scope.asentamientos_layers.forEach(function(layer,key){
+                map.removeLayer(layer);
+                delete $scope.asentamientos_layers[key];
+              })
             }
             CkanService.asentamientosActivos.forEach(function(feature){
               var latlngs = {};
@@ -1119,28 +1119,41 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               //var astColor = '#b175fb';
               var astColor = '#8894a3';
               var astVulner = 'Neutro/NR';
+              var astPin = 'img/pin-gray.svg';
               if ( feature.vulnera_urb ) {
                 astColor = $scope.astVulnera[feature.vulnera_urb].color;
                 astvulner = $scope.astVulnera[feature.vulnera_urb].name;
+                astPin = $scope.astVulnera[feature.vulnera_urb].icon;
               }
-              var polygon = L.polygon(latlngs, {color: astColor}).bindPopup(
-                '<div class="popup-header">'+
-                  '<div class="popup-ast-nombre">'+feature.nombre +"</div>"+
-                  '<div class="popup-ast-nombre-otro">'+feature.nombre_otro +"</div>"+
-                '</div>'+
-                '<ul class="popup-body">'+
-                  '<li><label>Año de creación</label><div class="popup-value">'+
-                  feature.y_creacion+'<div class="popup-value"></li>'+
-                  '<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
-                  feature.vulnera_urb+'<div class="popup-value"></li>'+
-                  '<li><label>Número estimado de personas</label><div class="popup-value">'+
-                  feature.estim_personas_ajust+'<div class="popup-value"></li>'+
-                  '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
-                  feature.nro_viviendas+'<div class="popup-value"></li>'+
-                  '</ul><div class="popup-footer"><a href="#">Click para ver más detalles<a></div>'
-              ).addTo(map);
-              $scope.asentamientos_layers[feature.id2018] = polygon;
+              //Popup
+              var astPopup = '<div class="popup-header">'+
+              '<div class="popup-ast-nombre">'+feature.nombre +"</div>"+
+              '<div class="popup-ast-nombre-otro">'+feature.nombre_otro +"</div>"+
+              '</div>'+
+              '<ul class="popup-body">'+
+              '<li><label>Año de creación</label><div class="popup-value">'+
+              feature.y_creacion+'<div class="popup-value"></li>'+
+              '<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
+              feature.vulnera_urb+'<div class="popup-value"></li>'+
+              '<li><label>Número estimado de personas</label><div class="popup-value">'+
+              feature.estim_personas_ajust+'<div class="popup-value"></li>'+
+              '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
+              feature.nro_viviendas+'<div class="popup-value"></li>'+
+              '</ul><div class="popup-footer"><a href="#">Click para ver más detalles</a></div>';
+
+              var polygon = L.polygon(latlngs, {color: astColor}).bindPopup(astPopup).addTo(map);
+
+              $scope.asentamientos_layers.push(polygon);
               //console.log(feature);
+              //Custom icons for polygons
+              var astIcon = $scope.mapIcon();
+              astIcon.iconUrl = astPin;
+              /*El cálculo de centroides de los polígonos deja el sistema muy lento, se generan datos y se cargan a la planilla*/
+              //var astBounds = polygon.getBounds();// Verificar que bounds no esté vacío: .getCenter();
+              if (feature.cent_lat && feature.cent_long) {
+                var astMarker = L.marker([feature.cent_lat,feature.cent_long], {icon: L.icon(astIcon)}).bindPopup(astPopup).addTo(map);
+                $scope.asentamientos_layers.push(astMarker);
+              }
             });
             document.getElementById("filter-total").innerHTML = CkanService.asentamientosActivos.length;
             document.getElementById("spinner").style.display = "none";

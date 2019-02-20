@@ -25,11 +25,11 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
       getData: function (filters) {
         var query = "SELECT * from ";
         if (filters.a_o && filters.a_o.uno) {
-          query += '"a3c8a073-ce32-434b-a751-f35c7b750968" ';
+          query += '"090341a0-dfba-43fd-bc82-da90394a883d" ';
         }
         else {
           //Fallback 2018
-          query += '"a3c8a073-ce32-434b-a751-f35c7b750968" ';
+          query += '"090341a0-dfba-43fd-bc82-da90394a883d" ';
         }
         // TODO: Ver que haya filtros o devolver todo
         console.log(filters);

@@ -75,3 +75,49 @@
   text-align: center;
   font-style: italic;
 }
+
+#niveles-vuln {
+  width: calc(100% - 360px);
+  position: absolute;
+  left: 360px;
+  z-index: 100;
+  color: #8894a3;
+  height: 48px;
+  opacity: 0.8;
+  background-color: #ffffff;
+  padding: 16px 24px;
+}
+#niveles-vuln label {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.lista-niveles-vuln {
+  float: right;
+}
+.lista-niveles-vuln div {
+  float: left;
+}
+.nivel-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+.extremo {
+  background-color: #c85757;
+}
+.alto {
+  background-color: #feb429;
+}
+.medio {
+  background-color: #0092dd;
+}
+.bajo {
+  background-color: #1cc7bd;
+}
+.neutro {
+  background-color: #8894a3;
+}

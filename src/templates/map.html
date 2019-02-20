@@ -11,6 +11,17 @@
 
 <ion-content data-tap-disabled="true">
   <div ng-include src="'templates/filters.html'" id="filters"></div>
+  <!-- TODO: Ver si no se puede levantar el objeto $scope.astVulnera para cargar con ng-repeat? -->
+  <div id="niveles-vuln">
+    <label>Nivel de vulnerabilidad</label>
+    <div class="lista-niveles-vuln">
+      <div class="nivel-color extremo"></div><div class="nivel-nombre">Extremo</div>
+      <div class="nivel-color alto"></div><div class="nivel-nombre">Alto</div>
+      <div class="nivel-color medio"></div><div class="nivel-nombre">Medio</div>
+      <div class="nivel-color bajo"></div><div class="nivel-nombre">Bajo</div>
+      <div class="nivel-color neutro"></div><div class="nivel-nombre">Neutro</div>
+    </div>
+  </div>
   <leaflet defaults="map.defaults" center="map.center" markers="map.markers" ng-if="map"></leaflet>
 </ion-content>
 
