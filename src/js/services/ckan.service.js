@@ -46,6 +46,9 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
                 else if (filters.tipo.urbano) queryArr.push("tipo_asentamiento = 1");
                 else if (filters.tipo.rural) queryArr.push("tipo_asentamiento = 2");
               break;
+              case 'depto':
+                queryArr.push("depto = "+filters.depto);
+              break;
               case 'vivendas_no':
                 var viviArr = [];
                 if (filters[filterGroup].uno) viviArr.push("nro_viviendas <= 50");
@@ -59,15 +62,26 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
               case 'vivendas_suelos':
               case 'p_contelect':
               case 'p_c_drenaje':
-              var pArr = [];
-              if (filters[filterGroup].cuarenta) pArr.push(filterGroup+" <= 40");
-              if (filters[filterGroup].sesenta) pArr.push(filterGroup+" > 40 AND 60 <= "+filterGroup);
-              if (filters[filterGroup].cien) pArr.push(filterGroup+" > 60");
-              queryArr.push(pArr.join(' OR '));
+              case 'p_acera_materiales':
+              case 'p_calle_materiales':
+                var pArr = [];
+                if (filters[filterGroup].cuarenta) pArr.push(filterGroup+" <= 40");
+                if (filters[filterGroup].sesenta) pArr.push(filterGroup+" > 40 AND 60 <= "+filterGroup);
+                if (filters[filterGroup].cien) pArr.push(filterGroup+" > 60");
+                queryArr.push(pArr.join(' OR '));
+                break;
+              case 'alumbrado_asent':
+              case 'basural_asent':
+              case 'parada_asent':
+              case 'placas_asent':
+                queryArr.push(filterGroup+" = 1");
               break;
-              case 'entorno':
+              case 'arbolado':
+                if (filters.arbolado.cincuenta && filters.arbolado.cien ) continue;
+                // TODO: Agregar campo a planilla
+                else if (filters.arbolado.cincuenta) queryArr.push("arbolado_asent = 0");
+                else if (filters.arbolado.cien) queryArr.push("arbolado_asent >= 1");
               break;
-
             }
           }
           query += queryArr.join(' AND ');

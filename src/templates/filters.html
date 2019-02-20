@@ -99,32 +99,30 @@
       <i class="icon arrow-icon" ng-class="isGroupShown('entorno') ? 'arrow-up' : 'arrow-down'"></i>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
-    <div class="section-title first">Estado general de las calles</div>
-    <ion-checkbox ng-model="filters.entorno_calles.pavimento">Con pavimento</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_calles.parcial">Parcialmente pavimientada</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_calles.balastro">Balastro o similares</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_calles.pedre">Pedregullo o similares</ion-checkbox>
+    <div class="section-title first">Porcentaje de calles de materiales precarios</div>
+    <ion-checkbox ng-model="filters.p_calle_materiales.cien">Más de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_calle_materiales.sesenta">Aproximadamente la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_calle_materiales.cuarenta">Menos de la mitad</ion-checkbox>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
-    <div class="section-title">Estado general de las veredas</div>
-    <ion-checkbox ng-model="filters.entorno_veredas.bitumen">Bitumen, hormigón, ladrillos, adoquines</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_veredas.afirmado">Afirmado de tosca o balasto</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_veredas.pedre">Sin pavimento (pedregullo, tierra, pastizal, otros)</ion-checkbox>
-    <ion-checkbox ng-model="filters.entorno_veredas.no">No hay vereda</ion-checkbox>
+    <div class="section-title">Porcentaje de calles sin vereda o con veredas precarias en el asentamiento</div>
+    <ion-checkbox ng-model="filters.p_acera_materiales.cien">Más de la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_acera_materiales.sesenta">Aproximadamente la mitad</ion-checkbox>
+    <ion-checkbox ng-model="filters.p_acera_materiales.cuarenta">Menos de la mitad</ion-checkbox>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
     <!-- TODO: Ver porqué el span que se genera no permite saltar de línea -->
     <div class="section-title">
-      <ion-toggle ng-model="filters.entorno_alumbrado" toggle-class="toggle-calm">Presencia de alumbrado público</ion-toggle>
+      <ion-toggle ng-model="filters.alumbrado_asent" toggle-class="toggle-calm">Presencia de alumbrado público</ion-toggle>
     </div>
     <div class="section-title">
-    <ion-toggle ng-model="filters.entorno_basural" toggle-class="toggle-calm">Presencia de basurales</ion-toggle>
+    <ion-toggle ng-model="filters.basural_asent" toggle-class="toggle-calm">Presencia de basurales</ion-toggle>
     </div>
     <div class="section-title">
-    <ion-toggle ng-model="filters.entorno_bus" toggle-class="toggle-calm">Presencia de paradas de ómnibus</ion-toggle>
+    <ion-toggle ng-model="filters.parada_asent" toggle-class="toggle-calm">Presencia de paradas de ómnibus</ion-toggle>
     </div>
     <div class="section-title">
-    <ion-toggle ng-model="filters.entorno_placas" toggle-class="toggle-calm">Presencia de placas con nombre de calles</ion-toggle>
+    <ion-toggle ng-model="filters.placas_asent" toggle-class="toggle-calm">Presencia de placas con nombre de calles</ion-toggle>
     </div>
   </ion-item>
   <ion-item class="item-accordion" ng-show="isGroupShown('entorno')">
