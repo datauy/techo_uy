@@ -25,7 +25,14 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
       getData: function (filters) {
         var query = "SELECT * from ";
         if (filters.a_o && filters.a_o.uno) {
-          query += '"090341a0-dfba-43fd-bc82-da90394a883d" ';
+          query += '"14348e65-292d-4b0d-b48b-0cce62418466" ';
+          //removemos campos que no están // TODO: inhabilitar los filtros
+          if(filters.hasOwnProperty('tipo')) delete filters.tipo;
+          if(filters.hasOwnProperty('vivendas_no')) delete filters.vivendas_no;
+          if(filters.hasOwnProperty('p_techos_prec')) delete filters.p_techos_prec;
+          if(filters.hasOwnProperty('p_paredes_prec')) delete filters.p_paredes_prec;
+          if(filters.hasOwnProperty('p_contelect')) delete filters.p_contelect;
+          if(filters.hasOwnProperty('p_c_drenaje')) delete filters.p_c_drenaje;
         }
         else {
           //Fallback 2018
@@ -34,6 +41,7 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
         if ( filters.depto == '0') {
           delete filters.depto;
         }
+        if(filters.hasOwnProperty('a_o')) delete filters.a_o;
         // TODO: Ver que haya filtros o devolver todo
         console.log(filters);
         if (Object.keys(filters).length) {

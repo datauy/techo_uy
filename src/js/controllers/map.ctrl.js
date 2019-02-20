@@ -1133,10 +1133,10 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               '<ul class="popup-body">'+
               '<li><label>Año de creación</label><div class="popup-value">'+
               feature.y_creacion+'<div class="popup-value"></li>'+
-              '<li><!--<label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
-              feature.vulnera_urb+'<div class="popup-value">--></li>'+
+              '<!--<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
+              feature.vulnera_urb+'<div class="popup-value"></li>'+
               '<li><label>Número estimado de personas</label><div class="popup-value">'+
-              feature.estim_personas_ajust+'<div class="popup-value"></li>'+
+              feature.estim_personas_ajust+'<div class="popup-value"></li>-->'+
               '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
               feature.nro_viviendas+'<div class="popup-value"></li>'+
               '</ul><div class="popup-footer"><a href="#">Click para ver más detalles</a></div>';
