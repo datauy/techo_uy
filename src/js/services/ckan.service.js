@@ -31,6 +31,9 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
           //Fallback 2018
           query += '"090341a0-dfba-43fd-bc82-da90394a883d" ';
         }
+        if ( filters.depto == '0') {
+          delete filters.depto;
+        }
         // TODO: Ver que haya filtros o devolver todo
         console.log(filters);
         if (Object.keys(filters).length) {
