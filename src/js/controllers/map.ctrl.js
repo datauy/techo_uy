@@ -1117,14 +1117,14 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 }
               }
               //var astColor = '#b175fb';
-              var astColor = '#8894a3';
-              var astVulner = 'Neutro/NR';
-              var astPin = 'img/pin-gray.svg';
-              if ( feature.vulnera_urb ) {
+              var astColor = '#1cc7bd';
+              var astVulner = 'No registrado';
+              var astPin = 'img/pin-green.svg';
+              /*if ( feature.vulnera_urb ) {
                 astColor = $scope.astVulnera[feature.vulnera_urb].color;
                 astvulner = $scope.astVulnera[feature.vulnera_urb].name;
                 astPin = $scope.astVulnera[feature.vulnera_urb].icon;
-              }
+              }*/
               //Popup
               var astPopup = '<div class="popup-header">'+
               '<div class="popup-ast-nombre">'+feature.nombre +"</div>"+
@@ -1133,8 +1133,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               '<ul class="popup-body">'+
               '<li><label>Año de creación</label><div class="popup-value">'+
               feature.y_creacion+'<div class="popup-value"></li>'+
-              '<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
-              feature.vulnera_urb+'<div class="popup-value"></li>'+
+              '<li><!--<label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
+              feature.vulnera_urb+'<div class="popup-value">--></li>'+
               '<li><label>Número estimado de personas</label><div class="popup-value">'+
               feature.estim_personas_ajust+'<div class="popup-value"></li>'+
               '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
