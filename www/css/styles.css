@@ -43,6 +43,11 @@ p {
   font-family: Montserrat, sans-serif;
 }
 
+.contact-data {
+  font-family: Montserrat, sans-serif;
+  margin-top: 32px;
+}
+
 #static-content {
   overflow-y: scroll;
 }
