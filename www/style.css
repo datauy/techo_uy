@@ -1201,6 +1201,7 @@ ion-select {
   height: 100%;
   background-color: #1e242c;
 	position: relative;
+	z-index: 2;
 }
 .section-title {
 	font-weight: 600;
@@ -1219,7 +1220,6 @@ ion-select {
 	font-weight: 600;
 	max-width: 80%;
 	float: left;
-	padding-top: 4px;
 }
 .scroll-content {
   position: relative;
@@ -1257,6 +1257,53 @@ ion-select {
 	height: 48px;
 	border-top: 1px solid #5f6978;
 	width: 100%;
+	padding: 12px 24px;
+}
+.filters-selected {
+	float: left;
+	margin: 2px 8px;
+	width: 25px;
+	height: 16px;
+	border-radius: 12px;
+	background-color: #1cc7bd;
+	font-size: 10px;
+	text-align: center;
+	line-height: 1.6;
+}
+.open {
+	width: 24px;
+	height: 24px;
+	margin: 16px;
+	float: left;
+}
+.open img {
+	transform: rotate(90deg);
+}
+#filters-applied {
+	transform: rotate(-90deg);
+	margin-left: 16px;
+}
+.opciones {
+	height: 16px;
+	transform: rotate(-90deg);
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1.6;
+	letter-spacing: 2px;
+	color: #8894a3;
+	float: left;
+	margin: 48px 0px 0 -8px;
+}
+.close {
+font-size: 12px;
+font-weight: bold;
+line-height: 5.6;
+letter-spacing: 2px;
+text-align: right;
+color: #8894a3;
+}
+.close img {
+	margin-bottom: -7px;
 }
 .item.active {
 	background: none;
