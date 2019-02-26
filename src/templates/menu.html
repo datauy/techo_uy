@@ -4,6 +4,72 @@
       <a class="navbar-brand logo-container" href="https://www.techo.org/uruguay/">
         <img target="_blank" src="https://institucional.techo.org/uruguay/wp-content/uploads/sites/21/2017/10/techo-footer.png" alt="TECHO Uruguay" id="logo">
       </a>
+      <div class="navbar">
+        <div class="burger-wrapper" onclick="toggleMenu();">
+          <div id="bar1" class="bar-1">
+          </div>
+          <div id="bar2" class="bar-2">
+          </div>
+          <div id="bar3" class="bar-3">
+          </div>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <!-- <script>
+          function toggleMenu() {
+            document.getElementById("navbar-elements").style.display = "flex";
+            return true;
+          }
+        </script> -->
+        <div class="navbar-wrapper">
+          <nav class="navbar-items">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#app/map">Mapa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#app/metodologia">Metodología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#app/contenidos">Contenidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#app/contacto">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="navbar-items navbar-right">
+            <ul class="nav navbar-nav navbar-expand-sm">
+              <li class="nav-icon">
+                <a href="https://www.linkedin.com/company/16240453/admin/" target="_blank">
+                  <i class="fa fa-linkedin fa-stack-1x icon-color"></i>
+                </a>
+              </li>
+              <li class="nav-icon">
+                <a href="https://twitter.com/TECHOuy" target="_blank">
+                  <i class="fa fa-twitter fa-stack-1x icon-color"></i>
+                </a>
+              </li>
+              <li class="nav-icon">
+                <a href="https://www.youtube.com/channel/UCKozyJnXOp9UWipOB4rM2cw" target="_blank">
+                  <i class="fa fa-youtube-play fa-stack-1x icon-color"></i>
+                </a>
+              </li>
+              <li class="nav-icon">
+                <a href="https://www.instagram.com/techo_uy/?hl=es-la" target="_blank">
+                  <i class="fa fa-instagram fa-stack-1x icon-color"></i>
+                </a>
+              </li>
+              <li class="nav-icon">
+                <a href="https://www.facebook.com/TECHOuruguay/?ref=bookmarks" target="_blank">
+                  <i class="fa fa-facebook fa-stack-1x icon-color"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--
       <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -52,6 +118,7 @@
          </ul>
         </div>
       </nav>
+      -->
     </ion-header-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
