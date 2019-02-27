@@ -143,9 +143,12 @@ p {
     display: flex;
     flex-direction: column;
     background-color: #0092dd;
+    position: absolute;
+    margin-left: -25%;
+    margin-top: 65px;
   }
 
-  .menu-btn:checked ~ .navbar-items {
+  .navbar-items {
     display: flex;
     flex-direction: column;
   }
