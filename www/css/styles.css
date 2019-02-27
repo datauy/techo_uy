@@ -49,6 +49,7 @@ p {
 }
 
 .navbar {
+  width: 75%;
   display: flex;
 }
 
@@ -104,7 +105,12 @@ p {
     width: 100%;
   }
 
-   .menu-icon .navicon:before {
+  ion-header-bar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .menu-icon .navicon:before {
     top: 10px;
   }
 
@@ -139,12 +145,11 @@ p {
     top: 0;
   }
 
-  .menu-btn:checked ~ .navbar-wrapper {
+  .menu-btn:checked ~ .navbar .navbar-wrapper {
     display: flex;
     flex-direction: column;
     background-color: #0092dd;
     position: absolute;
-    margin-left: -25%;
     margin-top: 65px;
   }
 
@@ -153,11 +158,20 @@ p {
     flex-direction: column;
   }
 
+  .nav-item {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
   .navbar-wrapper {
     display: none;
   }
 
   .navbar {
+    position: absolute;
     flex-direction: column;
   }
 
