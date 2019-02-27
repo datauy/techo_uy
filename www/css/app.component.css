@@ -64,3 +64,10 @@ img#logo {
 .fa-youtube-play {
   background-image: url(/img/ic-youtube.svg), none;
 }
+#filters-collapsed {
+  position: absolute;
+  height: 100%;
+  width: 56px;
+  background-color: #2a323d;
+  z-index: 1;
+}

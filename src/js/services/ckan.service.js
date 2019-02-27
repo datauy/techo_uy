@@ -43,7 +43,6 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
         }
         if(filters.hasOwnProperty('a_o')) delete filters.a_o;
         // TODO: Ver que haya filtros o devolver todo
-        console.log(filters);
         if (Object.keys(filters).length) {
           query += 'where ';
           queryArr = [];
@@ -98,9 +97,7 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
           query += queryArr.join(' AND ');
         }
         //var resp = $http.post(ConfigService.ckanSQL, { headers: {'Authorization': 'd7e78b6e-3eed-4d69-8387-ab0196121a51'} });
-        console.log('Query -> '+query);
         return $http.post('/ckanSql', {sql: query}).then(function (response) {
-          console.log(response);
           /*for (var i = 0; i < response.data.length; i++) {
             var agregar = 1;
             var ast = response.data[i];
