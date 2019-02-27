@@ -1072,8 +1072,8 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         $scope.submitFilters = function(){
           document.getElementById("spinner").style.display = "block";
           //// TODO: $scope.filters.a_o empty
-          if ( !$scope.filters.a_o ) {
-            $scope.filters.a_o.ocho = true;
+          if ( !$scope.filters.hasOwnProperty('a_o') ) {
+            $scope.filters['a_o'] = {ocho: true};
           }
           CkanService.getData($scope.filters).then(function (asentamientos) {
             CkanService.asentamientosActivos = asentamientos;

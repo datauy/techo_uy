@@ -1202,6 +1202,7 @@ ion-select {
   background-color: #1e242c;
 	position: relative;
 	z-index: 2;
+	height: 100vh;
 }
 .section-title {
 	font-weight: 600;
@@ -1225,7 +1226,7 @@ ion-select {
   position: relative;
 }
 .list {
-  max-height: calc(100vh - 308px);;
+  max-height: calc(100vh - 356px);;
   overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -1295,15 +1296,21 @@ ion-select {
 	margin: 48px 0px 0 -8px;
 }
 .close {
-font-size: 12px;
-font-weight: bold;
-line-height: 5.6;
-letter-spacing: 2px;
-text-align: right;
-color: #8894a3;
+	text-align: right;
+	height: 24px;
+	margin-top: 24px;
+}
+.close a {
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1.6;
+	letter-spacing: 2px;
+	color: #8894a3;
+	margin-right: 24px;
 }
 .close img {
 	margin-bottom: -7px;
+	margin-left: 8px;
 }
 .item.active {
 	background: none;
