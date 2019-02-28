@@ -1077,6 +1077,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           }
           CkanService.getData($scope.filters).then(function (asentamientos) {
             CkanService.asentamientosActivos = asentamientos;
+            CkanService.filtrosActivos = $scope.filters;
             document.getElementById("spinner").style.display = "block";
             //reload PinS
             $scope.updatePins();

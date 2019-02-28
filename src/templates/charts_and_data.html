@@ -1,0 +1,176 @@
+<ion-view title="{{AppName}}" hide-nav-bar="false">
+<link rel="stylesheet" href="css/charts.css">
+<div id="spinner" class="intro-spinner" style="display:none;"><ion-spinner icon="spiral"></ion-spinner></div>
+<div id="pinspinner" class="intro-spinner" style="display:none;"><ion-spinner icon="spiral"></ion-spinner></div>
+
+<!--<div class="top-bar-imm">
+  <div class="white-bar-imm"></div>
+  <div class="icon-imm-top"/></div>
+</div>
+-->
+
+<ion-content data-tap-disabled="true">
+  <div ng-include src="'templates/filters.html'"></div>
+  <!-- TODO: Ver si no se puede levantar el objeto $scope.astVulnera para cargar con ng-repeat?
+  <div id="niveles-vuln">
+    <label>Nivel de vulnerabilidad</label>
+    <div class="lista-niveles-vuln">
+      <div class="nivel-color extremo"></div><div class="nivel-nombre">Extremo</div>
+      <div class="nivel-color alto"></div><div class="nivel-nombre">Alto</div>
+      <div class="nivel-color medio"></div><div class="nivel-nombre">Medio</div>
+      <div class="nivel-color bajo"></div><div class="nivel-nombre">Bajo</div>
+      <div class="nivel-color neutro"></div><div class="nivel-nombre">Neutro</div>
+    </div>
+  </div>-->
+  <div class="chartsContainer">
+    <div class="chartsTopBar">
+      <div class="chartsTopBarItem" style="margin-left: 16px;">
+        <div class="chartsTopBarItemTitle">
+          Personas
+        </div>
+        <div class="chartsTopBarItemValue">
+          {{total_people}}
+        </div>
+      </div>
+      <div class="chartsTopBarItem">
+        <div class="chartsTopBarItemTitle">
+          Asentamientos
+        </div>
+        <div class="chartsTopBarItemValue">
+          {{total_stablishments}}
+        </div>
+      </div>
+      <div class="chartsTopBarItem">
+        <div class="chartsTopBarItemTitle">
+          Viviendas
+        </div>
+        <div class="chartsTopBarItemValue">
+          {{total_houses}}
+        </div>
+      </div>
+      <div class="chartsTopBarItemNoBorder">
+        <div class="chartsTopBarItemTitle">
+          Zona
+        </div>
+        <div class="chartsTopBarItemValueArea">
+          {{area}}
+        </div>
+      </div>
+    </div>
+
+    <div class="charts_tabs">
+      <ion-tabs class="tabs-positive tabs-icon-top" selectedIndex="0">
+
+        <ion-tab id="generalTab" title="Datos Generales">
+          <ion-scroll direction="y" class="scroll_inside_tabs" delegate-handle="content">
+            <div style="position: absoulute; height: 1800px; width: 750px;">
+              <div class="chartsInsideTabMainTitle">
+                Viviendas
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Nº estimado de viviendas</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos de 50</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCiencuentaViviendas}}%</div>
+                <div class="chartLegendTitle">Entre 50 y 100</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCiencuentaCienViviendas}}%</div>
+                <div class="chartLegendTitle">Entre 100 y 200</div>
+                <div class="chartLegendValueThree">{{porcentajeEntreCienDoscientasViviendas}}%</div>
+                <div class="chartLegendTitle">Más de 200</div>
+                <div class="chartLegendValueFour">{{porcentajeMasDoscientasViviendas}}%</div>
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Porcentaje de edificaciones con techos precarios</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos del 40%</div>
+                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendTitle">Entre el 40% y 60%</div>
+                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendTitle">Más del 60%</div>
+                <div class="chartLegendValueThree">46,2%</div>
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Porcentaje de edificaciones con paredes precarias</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos del 40%</div>
+                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendTitle">Entre el 40% y 60%</div>
+                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendTitle">Más del 60%</div>
+                <div class="chartLegendValueThree">46,2%</div>
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Porcentaje de edificaciones con suelos precarios</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos del 40%</div>
+                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendTitle">Entre el 40% y 60%</div>
+                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendTitle">Más del 60%</div>
+                <div class="chartLegendValueThree">46,2%</div>
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Porcentaje de edificaciones con contador de consumo eléctrico</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos del 40%</div>
+                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendTitle">Entre el 40% y 60%</div>
+                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendTitle">Más del 60%</div>
+                <div class="chartLegendValueThree">46,2%</div>
+              </div>
+
+              <div class="inlineChart">
+                <div class="chartTitle">Presencia de zanjas de drenaje por edificación</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Menos del 40%</div>
+                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendTitle">Entre el 40% y 60%</div>
+                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendTitle">Más del 60%</div>
+                <div class="chartLegendValueThree">46,2%</div>
+              </div>
+
+            </div>
+          </ion-scroll>
+        </ion-tab>
+
+        <ion-tab id="historyTab" title="Datos Históricos">
+        </ion-tab>
+
+      </ion-tabs>
+    </div>
+
+  </div>
+</ion-content>
+
+</ion-view>
