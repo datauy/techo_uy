@@ -1,4 +1,5 @@
 pmb_im.controllers.controller('MapController', ['$scope', '_',
+  '$state',
   '$cordovaCamera',
   '$cordovaGeolocation',
   '$compile',
@@ -28,6 +29,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
   function(
     $scope,
     _,
+    $state,
     $cordovaCamera,
     $cordovaGeolocation,
     $compile,
@@ -388,6 +390,14 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           CkanService.asentamientosActivos = response;
           $scope.updatePins();
         });
+    }
+
+    $scope.getTotalAsentamientos = function(){
+      if(CkanService.asentamientosActivos){
+        return CkanService.asentamientosActivos.length;
+      }else{
+        return "656";
+      }
     }
 
   $scope.getOnlyCoordinatesPolygon = function(wkt_geom){
@@ -1102,6 +1112,10 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
             iconAnchor:   [18, 36], // point of the icon which will correspond to marker's location
             popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
           };
+        }
+
+        $scope.switchStates = function(){
+          $state.go("app.data");
         }
 
         $scope.updatePins = function() {

@@ -11,14 +11,15 @@
   </div>
   <div class="filter-totals">
     <div class="filter-title">Cantidad de asentamientos</div>
-    <div id="filter-total">656</div>
+    <div id="filter-total">{{getTotalAsentamientos()}}</div>
   </div>
   <!--<ion-scroll direction="y" scrollbar-x=0 style="width: 100%;">-->
   <ion-list>
     <ion-item class="filter-zona">
       <div class="filter-title">Zona</div>
-      <label class="filter-select">Departamento</label>
+      <!--<label class="filter-select">Departamento</label>-->
       <select class="input select-list" ng-model="filters.depto">
+          <option value="" disabled selected>Departamento</option>
           <option value="1">Montevideo</option>
           <option value="2">Artigas</option>
           <option value="3">Canelones</option>
@@ -146,7 +147,7 @@
 
   <div class="form-actions">
     <button class="button button-full button-positive" ng-click="submitFilters()">Filtrar</button>
-    <button class="button button-full button-assertive" type="submit" ng-click="submitFilters()">Ver datos</button>
+    <button id="filterButtonGoToDataOrMap" class="button button-full button-assertive" type="submit" ng-click="switchStates()">Ver datos</button>
   </div>
 </div>
   <!--<div style="height: 200px"></div>

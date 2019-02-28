@@ -1,27 +1,10 @@
 <ion-view title="{{AppName}}" hide-nav-bar="false">
 <link rel="stylesheet" href="css/charts.css">
 <div id="spinner" class="intro-spinner" style="display:none;"><ion-spinner icon="spiral"></ion-spinner></div>
-<div id="pinspinner" class="intro-spinner" style="display:none;"><ion-spinner icon="spiral"></ion-spinner></div>
-
-<!--<div class="top-bar-imm">
-  <div class="white-bar-imm"></div>
-  <div class="icon-imm-top"/></div>
-</div>
--->
 
 <ion-content data-tap-disabled="true">
   <div ng-include src="'templates/filters.html'"></div>
-  <!-- TODO: Ver si no se puede levantar el objeto $scope.astVulnera para cargar con ng-repeat?
-  <div id="niveles-vuln">
-    <label>Nivel de vulnerabilidad</label>
-    <div class="lista-niveles-vuln">
-      <div class="nivel-color extremo"></div><div class="nivel-nombre">Extremo</div>
-      <div class="nivel-color alto"></div><div class="nivel-nombre">Alto</div>
-      <div class="nivel-color medio"></div><div class="nivel-nombre">Medio</div>
-      <div class="nivel-color bajo"></div><div class="nivel-nombre">Bajo</div>
-      <div class="nivel-color neutro"></div><div class="nivel-nombre">Neutro</div>
-    </div>
-  </div>-->
+
   <div class="chartsContainer">
     <div class="chartsTopBar">
       <div class="chartsTopBarItem" style="margin-left: 16px;">
@@ -64,6 +47,7 @@
         <ion-tab id="generalTab" title="Datos Generales">
           <ion-scroll direction="y" class="scroll_inside_tabs" delegate-handle="content">
             <div style="position: absoulute; height: 1800px; width: 750px;">
+
               <div class="chartsInsideTabMainTitle">
                 Viviendas
               </div>
@@ -89,75 +73,150 @@
                 <div class="chartTitle">Porcentaje de edificaciones con techos precarios</div>
                 <div class="doughnutChartContainer">
                   <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
-                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                    chart-colors="colors" chart-data="techosData" chart-labels="techosLabels">
                   </canvas>
                 </div>
                 <div class="chartLegendTitle">Menos del 40%</div>
-                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCuarentaTechosPrecarios}}%</div>
                 <div class="chartLegendTitle">Entre el 40% y 60%</div>
-                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCuarentaSesentaTechosPrecarios}}%</div>
                 <div class="chartLegendTitle">Más del 60%</div>
-                <div class="chartLegendValueThree">46,2%</div>
+                <div class="chartLegendValueThree">{{porcentajeMasSesentaTechosPrecarios}}%</div>
               </div>
 
               <div class="inlineChart">
                 <div class="chartTitle">Porcentaje de edificaciones con paredes precarias</div>
                 <div class="doughnutChartContainer">
                   <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
-                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                    chart-colors="colors" chart-data="paredesData" chart-labels="paredesLabels">
                   </canvas>
                 </div>
                 <div class="chartLegendTitle">Menos del 40%</div>
-                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCuarentaParedesPrecarios}}%</div>
                 <div class="chartLegendTitle">Entre el 40% y 60%</div>
-                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCuarentaSesentaParedesPrecarios}}%</div>
                 <div class="chartLegendTitle">Más del 60%</div>
-                <div class="chartLegendValueThree">46,2%</div>
+                <div class="chartLegendValueThree">{{porcentajeMasSesentaParedesPrecarios}}%</div>
               </div>
 
+              <!-- Comentado porque no existe en los datos
               <div class="inlineChart">
                 <div class="chartTitle">Porcentaje de edificaciones con suelos precarios</div>
                 <div class="doughnutChartContainer">
                   <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
-                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                    chart-colors="colors" chart-data="suelosData" chart-labels="suelosLabels">
                   </canvas>
                 </div>
                 <div class="chartLegendTitle">Menos del 40%</div>
-                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCuarentaSuelosPrecarios}}%</div>
                 <div class="chartLegendTitle">Entre el 40% y 60%</div>
-                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCuarentaSesentaSuelosPrecarios}}%</div>
                 <div class="chartLegendTitle">Más del 60%</div>
-                <div class="chartLegendValueThree">46,2%</div>
+                <div class="chartLegendValueThree">{{porcentajeMasSesentaSuelosPrecarios}}%</div>
               </div>
+              -->
 
               <div class="inlineChart">
                 <div class="chartTitle">Porcentaje de edificaciones con contador de consumo eléctrico</div>
                 <div class="doughnutChartContainer">
                   <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
-                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                    chart-colors="colors" chart-data="contadoresData" chart-labels="contadoresLabels">
                   </canvas>
                 </div>
                 <div class="chartLegendTitle">Menos del 40%</div>
-                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCuarentaContadoresElectricos}}%</div>
                 <div class="chartLegendTitle">Entre el 40% y 60%</div>
-                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCuarentaSesentaContadoresElectricos}}%</div>
                 <div class="chartLegendTitle">Más del 60%</div>
-                <div class="chartLegendValueThree">46,2%</div>
+                <div class="chartLegendValueThree">{{porcentajeMasSesentaContadoresElectricos}}%</div>
               </div>
 
               <div class="inlineChart">
                 <div class="chartTitle">Presencia de zanjas de drenaje por edificación</div>
                 <div class="doughnutChartContainer">
                   <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
-                    chart-colors="colors" chart-data="viviendasData" chart-labels="viviendasLabels">
+                    chart-colors="colors" chart-data="zanjasData" chart-labels="zanjasLabels">
                   </canvas>
                 </div>
                 <div class="chartLegendTitle">Menos del 40%</div>
-                <div class="chartLegendValueOne">46,2%</div>
+                <div class="chartLegendValueOne">{{porcentajeMenosCuarentaZanjas}}%</div>
                 <div class="chartLegendTitle">Entre el 40% y 60%</div>
-                <div class="chartLegendValueTwo">46,2%</div>
+                <div class="chartLegendValueTwo">{{porcentajeEntreCuarentaSesentaZanjas}}%</div>
                 <div class="chartLegendTitle">Más del 60%</div>
-                <div class="chartLegendValueThree">46,2%</div>
+                <div class="chartLegendValueThree">{{porcentajeMasSesentaZanjas}}%</div>
+              </div>
+
+              <div class="chartsInsideTabMainTitle" style="top: auto; float: left; clear: both; margin-bottom: -40px;">
+                Entorno urbano
+              </div>
+
+              <div class="inlineChartShort">
+                <div class="chartTitle">Presencia de alumbrado público</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="alumbradoData" chart-labels="alumbradoLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Si</div>
+                <div class="chartLegendValueOne">{{porcentajeAlumbradoSi}}%</div>
+                <div class="chartLegendTitle">No</div>
+                <div class="chartLegendValueTwo">{{porcentajeAlumbradoNo}}%</div>
+              </div>
+
+              <div class="inlineChartShort">
+                <div class="chartTitle">Presencia de basurales</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="basuralData" chart-labels="basuralLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Si</div>
+                <div class="chartLegendValueOne">{{porcentajeBasuralSi}}%</div>
+                <div class="chartLegendTitle">No</div>
+                <div class="chartLegendValueTwo">{{porcentajeBasuralNo}}%</div>
+              </div>
+
+              <div class="inlineChartShort">
+                <div class="chartTitle">Presencia de paradas de ómibus</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="paradasData" chart-labels="paradasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Si</div>
+                <div class="chartLegendValueOne">{{porcentajeParadasSi}}%</div>
+                <div class="chartLegendTitle">No</div>
+                <div class="chartLegendValueTwo">{{porcentajeParadasNo}}%</div>
+              </div>
+
+              <div class="inlineChartShort">
+                <div class="chartTitle">Presencia de placas con nombre de calles</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="placasData" chart-labels="placasLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Si</div>
+                <div class="chartLegendValueOne">{{porcentajePlacasSi}}%</div>
+                <div class="chartLegendTitle">No</div>
+                <div class="chartLegendValueTwo">{{porcentajePlacasNo}}%</div>
+              </div>
+
+              <div class="inlineChartShort">
+                <div class="chartTitle">Arbolado</div>
+                <div class="doughnutChartContainer">
+                  <canvas width="120" height="120" id="doughnut" class="chart chart-doughnut"
+                    chart-colors="colors" chart-data="arboladoData" chart-labels="arboladoLabels">
+                  </canvas>
+                </div>
+                <div class="chartLegendTitle">Si</div>
+                <div class="chartLegendValueOne">{{porcentajeArboladoSi}}%</div>
+                <div class="chartLegendTitle">No</div>
+                <div class="chartLegendValueTwo">{{porcentajeArboladoNo}}%</div>
+              </div>
+
+              <div class="chartsInsideTabLostData">
+                *Existen datos perdidos...
               </div>
 
             </div>
