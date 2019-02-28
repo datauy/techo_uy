@@ -35,6 +35,9 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
   $scope.porcentajeBasuralNo = 0;
 
   $scope.$on("$ionicView.beforeEnter", function() {
+    if(CkanService.filtrosActivos){
+      $scope.filters = CkanService.filtrosActivos;
+    }
     document.getElementById("spinner").style.display = "block";
     if(CkanService.asentamientosActivos){
       $scope.setChartsData();

@@ -145,7 +145,13 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         center: {
         }
       };
-      $scope.loadPinsLayer();
+      document.getElementById("spinner").style.display = "block";
+      if(CkanService.filtrosActivos){
+        $scope.filters = CkanService.filtrosActivos;
+        $scope.updatePins();
+      }else{
+        $scope.loadPinsLayer();
+      }
       $scope.map.center = {
           lat: -34.901113,
           lng: -56.164531,
