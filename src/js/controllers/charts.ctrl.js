@@ -2,6 +2,7 @@ pmb_im.controllers.controller('ChartsController',
 ['$scope','$state','CkanService','$ionicScrollDelegate',
 function($scope,$state,CkanService,$ionicScrollDelegate) {
 
+  $scope.dataOrMapButtonText = "Ver mapa";
   $scope.total_people = 0;
   $scope.total_stablishments = 0;
   $scope.total_houses = 0;
@@ -43,10 +44,6 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
         $scope.setChartsData();
       });
     }
-  });
-
-  $scope.$on("$ionicView.afterEnter", function() {
-    document.getElementById("filterButtonGoToDataOrMap").innerText="Ver mapa";
   });
 
   /** FILTERS JS */

@@ -61,6 +61,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     /**
      * Once state loaded, get put map on scope.
      */
+    $scope.dataOrMapButtonText = "Ver datos";
     $scope.asentamientos_layers = new Array();
     $scope.baseURL = ConfigService.baseURL;
     $scope.AppName = ConfigService.AppName;
