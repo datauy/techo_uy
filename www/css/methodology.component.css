@@ -2,19 +2,8 @@
   width: 100%;
 }
 
-.content-container {
-  margin: auto;
-  margin-top: 48px;
-  width: 624px;
-}
-
 footer {
   background-color: #2a323d;
-}
-
-.contact-container {
-  margin: auto;
-  width: 624px;
 }
 
 .mini-logo {

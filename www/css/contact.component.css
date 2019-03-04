@@ -6,19 +6,8 @@
   font-family: Montserrat, sans-serif;
 }
 
-.content-container {
-  margin: auto;
-  margin-top: 48px;
-  width: 624px;
-}
-
 footer {
   background-color: #2a323d;
-}
-
-.contact-container {
-  margin: auto;
-  width: 624px;
 }
 
 .mini-logo {
@@ -66,13 +55,6 @@ footer .icon-color {
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 .col {

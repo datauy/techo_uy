@@ -69,12 +69,38 @@ p {
 .menu-btn {
   display: none;
 }
-/*
-.burger-wrapper {
-  display: none;
+
+.content-container {
+  margin: auto;
+  margin-top: 48px;
+  width: 624px;
 }
-*/
+
+.contact-container {
+  margin: auto;
+  width: 624px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 @media only screen and (max-width: 970px) {
+    .content-container {
+      margin-left: 24px;
+      margin-right: 24px;
+      margin-top: 48px;
+      width: auto;
+    }
+
+    .contact-container {
+      margin-left: 24px;
+      margin-right: 24px;
+      width: auto;
+    }
+
    .menu-icon {
     cursor: pointer;
     display: inline-block;
