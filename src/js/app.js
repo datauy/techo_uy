@@ -10,7 +10,7 @@ var pmb_im = {
   services: angular.module('pmb_im.services', [])
 };
 
-pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete','leaflet-directive', 'pmb_im.controllers', 'pmb_im.services', 'ngCordova'])
+pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete','leaflet-directive', 'pmb_im.controllers', 'pmb_im.services', 'ngCordova', 'chart.js'])
 
 .constant('ApiImEndpoint', {
   url: 'http://www.montevideo.gub.uy'
@@ -134,6 +134,20 @@ pmb_im.app = angular.module('pmb_im', ['ionic','ionic.wizard','ion-autocomplete'
     }
   }
 })
+
+.state('app.data', {
+  cache: false,
+  url: "/data",
+  views: {
+    'menuContent' :{
+      templateUrl: "templates/charts_and_data.html",
+      controller : "ChartsController"
+    }
+  }
+})
+
+
+
 
 .state('app.intro', {
   cache: false,

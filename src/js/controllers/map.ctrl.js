@@ -1,4 +1,5 @@
 pmb_im.controllers.controller('MapController', ['$scope', '_',
+  '$state',
   '$cordovaCamera',
   '$cordovaGeolocation',
   '$compile',
@@ -28,6 +29,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
   function(
     $scope,
     _,
+    $state,
     $cordovaCamera,
     $cordovaGeolocation,
     $compile,
@@ -59,6 +61,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     /**
      * Once state loaded, get put map on scope.
      */
+    $scope.dataOrMapButtonText = "Ver datos";
     $scope.asentamientos_layers = new Array();
     $scope.baseURL = ConfigService.baseURL;
     $scope.AppName = ConfigService.AppName;
@@ -142,7 +145,14 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         center: {
         }
       };
-      $scope.loadPinsLayer();
+      document.getElementById("spinner").style.display = "block";
+      if(CkanService.filtrosActivos){
+        $scope.filters = CkanService.filtrosActivos;
+        $scope.updatePins();
+      }else{
+        $scope.filters.a_o = {uno: false, ocho: true};
+        $scope.loadPinsLayer();
+      }
       $scope.map.center = {
           lat: -34.901113,
           lng: -56.164531,
@@ -384,10 +394,18 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
 
     $scope.loadPinsLayer = function(){
       document.getElementById("spinner").style.display = "block";
-        CkanService.getAllData('090341a0-dfba-43fd-bc82-da90394a883d').then(function (response) {
+        CkanService.getAllData("2018").then(function (response) {
           CkanService.asentamientosActivos = response;
           $scope.updatePins();
         });
+    }
+
+    $scope.getTotalAsentamientos = function(){
+      if(CkanService.asentamientosActivos){
+        return CkanService.asentamientosActivos.length;
+      }else{
+        return "656";
+      }
     }
 
   $scope.getOnlyCoordinatesPolygon = function(wkt_geom){
@@ -1077,6 +1095,9 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           }
           CkanService.getData($scope.filters).then(function (asentamientos) {
             CkanService.asentamientosActivos = asentamientos;
+            CkanService.filtrosActivos = $scope.filters;
+            //CkanService.filtrosActivos = $scope.cloneArray($scope.filters);
+
             document.getElementById("spinner").style.display = "block";
             //reload PinS
             $scope.updatePins();
@@ -1101,6 +1122,10 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
             iconAnchor:   [18, 36], // point of the icon which will correspond to marker's location
             popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
           };
+        }
+
+        $scope.switchStates = function(){
+          $state.go("app.data");
         }
 
         $scope.updatePins = function() {
@@ -1177,14 +1202,21 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           }
         }
         $scope.filterA_o = function(a_o){
-          if ( $scope.filters.a_o[a_o] == true ){
-            if ( a_o == 'uno' ){
-              $scope.filters.a_o.ocho = false;
-            }
-            else {
+          if(a_o=="2018"){
+            if($scope.filters.a_o.ocho == true){
               $scope.filters.a_o.uno = false;
+            }else{
+              $scope.filters.a_o.uno = true;
             }
           }
+          if(a_o=="2011"){
+            if($scope.filters.a_o.uno == true){
+              $scope.filters.a_o.ocho = false;
+            }else{
+              $scope.filters.a_o.ocho = true;
+            }
+          }
+          console.log($scope.filters.a_o);
         }
         $scope.filterChange = function(totalDiv, sumar){
           console.log(totalDiv+': '+sumar);
@@ -1230,6 +1262,24 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           $scope.filters.arbolado.cien = true;
           $scope.filters.arbolado.cincuenta = true;
         };
+
+        $scope.cloneArray = function(obj){
+          if (Object.prototype.toString.call(obj) === '[object Array]') {
+              var out = [], i = 0, len = obj.length;
+              for ( ; i < len; i++ ) {
+                  out[i] = arguments.callee(obj[i]);
+              }
+              return out;
+          }
+          if (typeof obj === 'object') {
+              var out = {}, i;
+              for ( i in obj ) {
+                  out[i] = arguments.callee(obj[i]);
+              }
+              return out;
+          }
+          return obj;
+        }
   }
 
 ]);

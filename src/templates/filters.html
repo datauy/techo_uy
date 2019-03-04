@@ -11,14 +11,15 @@
   </div>
   <div class="filter-totals">
     <div class="filter-title">Cantidad de asentamientos</div>
-    <div id="filter-total">656</div>
+    <div id="filter-total">{{getTotalAsentamientos()}}</div>
   </div>
   <!--<ion-scroll direction="y" scrollbar-x=0 style="width: 100%;">-->
   <ion-list>
     <ion-item class="filter-zona">
       <div class="filter-title">Zona</div>
-      <label class="filter-select">Departamento</label>
+      <!--<label class="filter-select">Departamento</label>-->
       <select class="input select-list" ng-model="filters.depto">
+          <option value="" disabled selected>Departamento</option>
           <option value="1">Montevideo</option>
           <option value="2">Artigas</option>
           <option value="3">Canelones</option>
@@ -47,8 +48,8 @@
         <i class="icon arrow-icon" ng-class="isGroupShown('a_o') ? 'arrow-up' : 'arrow-down'"></i>
     </ion-item>
     <ion-item class="item-accordion" ng-show="isGroupShown('a_o')">
-        <ion-checkbox ng-model="filters.a_o.ocho" ng-change="filterA_o(filters.a_o)" ng-checked="true">2018</ion-checkbox>
-      <ion-checkbox ng-model="filters.a_o.uno" ng-change="filterA_o(filters.a_o)">2011</ion-checkbox>
+        <ion-checkbox ng-model="filters.a_o.ocho" ng-change="filterA_o('2018')">2018</ion-checkbox>
+      <ion-checkbox ng-model="filters.a_o.uno" ng-change="filterA_o('2011')">2011</ion-checkbox>
     </ion-item>
 
     <ion-item class="filter-header" ng-click="toggleGroup('tipo')" ng-class="{active: isGroupShown('tipo')}">
@@ -146,7 +147,7 @@
 
   <div class="form-actions">
     <button class="button button-full button-positive" ng-click="submitFilters()">Filtrar</button>
-    <button class="button button-full button-assertive" type="submit" ng-click="submitFilters()">Ver datos</button>
+    <button id="filterButtonGoToDataOrMap" class="button button-full button-assertive" type="submit" ng-click="switchStates()">{{dataOrMapButtonText}}</button>
   </div>
 </div>
   <!--<div style="height: 200px"></div>
