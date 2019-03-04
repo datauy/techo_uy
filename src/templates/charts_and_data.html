@@ -44,7 +44,7 @@
     <div class="charts_tabs">
       <ion-tabs class="tabs-positive tabs-icon-top" selectedIndex="0">
 
-        <ion-tab id="generalTab" title="Datos Generales">
+        <ion-tab id="generalTab" title="Datos Generales*">
           <ion-scroll direction="y" class="scroll_inside_tabs" delegate-handle="content">
             <div style="position: absoulute; height: 1800px; width: 750px;">
 
@@ -224,6 +224,63 @@
         </ion-tab>
 
         <ion-tab id="historyTab" title="Datos Históricos">
+          <ion-scroll direction="y" class="scroll_inside_tabs" delegate-handle="content">
+            <div id="historyData" style="position: absoulute; height: 1800px; width: 750px;">
+
+              <!--<div class="chartsInsideTabMainTitleHistory" style="float: left; clear: both;">
+                Estado general de las veredas
+              </div>-->
+
+              <div class="inlineHistoryData">
+                <div class="chartTitle">Presencia de alumbrado público</div>
+                <div class="chartLegendTitle">2011</div>
+                <div class="chartLegendValueOne">{{porcentajeAlumbradoSi2011}}%</div>
+                <div class="chartLegendTitle">2018</div>
+                <div class="chartLegendValueTwo">{{porcentajeAlumbradoSi2018}}%</div>
+              </div>
+
+              <div class="inlineHistoryData">
+                <div class="chartTitle">Presencia de paradas de ómibus</div>
+                <div class="chartLegendTitle">2011</div>
+                <div class="chartLegendValueOne">{{porcentajeParadasSi2011}}%</div>
+                <div class="chartLegendTitle">2018</div>
+                <div class="chartLegendValueTwo">{{porcentajeParadasSi2018}}%</div>
+              </div>
+
+              <div class="inlineHistoryData">
+                <div class="chartTitle">Presencia de placas con nombre de calles</div>
+                <div class="chartLegendTitle">2011</div>
+                <div class="chartLegendValueOne">{{porcentajePlacasSi2011}}%</div>
+                <div class="chartLegendTitle">2018</div>
+                <div class="chartLegendValueTwo">{{porcentajePlacasSi2018}}%</div>
+              </div>
+
+              <div class="historyDataSeparator">
+              </div>
+
+              <div class="chartsInsideTabMainTitleHistory" style="top: auto; float: left; clear: both; margin-bottom: -40px;">
+                Arbolado
+              </div>
+
+              <div class="inlineHistoryData arbolado">
+                <div class="chartTitle">Con arbolado</div>
+                <div class="chartLegendTitle">2011</div>
+                <div class="chartLegendValueOne">{{porcentajeArboladoSi2011}}%</div>
+                <div class="chartLegendTitle">2018</div>
+                <div class="chartLegendValueTwo">{{porcentajeArboladoSi2018}}%</div>
+              </div>
+
+              <div class="inlineHistoryData arbolado">
+                <div class="chartTitle">Sin arbolado</div>
+                <div class="chartLegendTitle">2011</div>
+                <div class="chartLegendValueOne">{{porcentajeArboladoNo2011}}%</div>
+                <div class="chartLegendTitle">2018</div>
+                <div class="chartLegendValueTwo">{{porcentajeArboladoNo2018}}%</div>
+              </div>
+
+            </div>
+
+          </ion-scroll>
         </ion-tab>
 
       </ion-tabs>

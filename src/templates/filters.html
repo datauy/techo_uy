@@ -48,8 +48,8 @@
         <i class="icon arrow-icon" ng-class="isGroupShown('a_o') ? 'arrow-up' : 'arrow-down'"></i>
     </ion-item>
     <ion-item class="item-accordion" ng-show="isGroupShown('a_o')">
-        <ion-checkbox ng-model="filters.a_o.ocho" ng-change="filterA_o(filters.a_o)" ng-checked="true">2018</ion-checkbox>
-      <ion-checkbox ng-model="filters.a_o.uno" ng-change="filterA_o(filters.a_o)">2011</ion-checkbox>
+        <ion-checkbox ng-model="filters.a_o.ocho" ng-change="filterA_o('2018')">2018</ion-checkbox>
+      <ion-checkbox ng-model="filters.a_o.uno" ng-change="filterA_o('2011')">2011</ion-checkbox>
     </ion-item>
 
     <ion-item class="filter-header" ng-click="toggleGroup('tipo')" ng-class="{active: isGroupShown('tipo')}">

@@ -160,6 +160,31 @@ font-size: 14px;
   padding-top: 8px;
 }
 
+.chartsInsideTabMainTitleHistory{
+background-color: #ffffff;
+position: relative;
+top: 70px;
+width: 206px;
+height: 20px;
+font-size: 14px;
+font-weight: bold;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.43;
+letter-spacing: normal;
+color: #2a323d;;
+padding-left: 0px;
+padding-top: 8px;
+}
+
+.historyDataSeparator{
+  position: relative;
+  height: 32px;
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
 .inlineChart{
   width: 136px;
   height: 450px;
@@ -167,6 +192,19 @@ font-size: 14px;
 margin-top: 90px;
 margin-left: 32px;
 float: left;
+}
+
+.inlineHistoryData{
+  width: 136px;
+  height: 180px;
+  position: relative;
+  margin-top: 90px;
+  margin-right: 24px;
+  float: left;
+}
+
+.inlineHistoryData.arbolado{
+  margin-top: 40px;
 }
 
 .inlineChartShort{
@@ -191,6 +229,33 @@ float: left;
   margin-bottom: 16px;
 }
 
+.inlineHistoryData .chartTitle{
+  width: 136px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #2a323d;
+  margin-bottom: 8px;
+}
+
+.inlineHistoryData.arbolado .chartTitle{
+  width: 128px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #5f6978;
+  margin-bottom: 8px;
+
+}
+
 .doughnutChartContainer{
   width: 120px;
   height: 120px;
@@ -211,6 +276,19 @@ float: left;
    margin-top: 16px;
 }
 
+.inlineHistoryData .chartLegendTitle{
+  width: 50px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: #8894a3;
+  margin-top: 0;
+}
+
 .chartLegendValueOne{
   width: 136px;
   height: 32px;
@@ -221,6 +299,10 @@ float: left;
   line-height: 1.33;
   letter-spacing: normal;
   color: #0092dd;
+}
+
+.inlineHistoryData .chartLegendValueOne{
+  margin-bottom: 8px;
 }
 
 .chartLegendValueTwo{

@@ -35,14 +35,17 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
   $scope.porcentajeBasuralNo = 0;
 
   $scope.$on("$ionicView.beforeEnter", function() {
-    if(CkanService.filtrosActivos){
+    if(CkanService.filtrosActivos!=null){
       $scope.filters = CkanService.filtrosActivos;
+    }else{
+      $scope.filters.a_o = {uno: false, ocho: true};
     }
     document.getElementById("spinner").style.display = "block";
     if(CkanService.asentamientosActivos){
       $scope.setChartsData();
     }else{
-      CkanService.getAllData('090341a0-dfba-43fd-bc82-da90394a883d').then(function (response) {
+      //Si todavía no cargué nada traigo todo 2018 por defecto
+      CkanService.getAllData("2018").then(function (response) {
         CkanService.asentamientosActivos = response;
         $scope.setChartsData();
       });
@@ -56,9 +59,11 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
       $scope.filters['a_o'] = {ocho: true};
     }
     document.getElementById("spinner").style.display = "block";
+    console.log($scope.filters);
     CkanService.getData($scope.filters).then(function (asentamientos) {
       CkanService.asentamientosActivos = asentamientos;
       CkanService.filtrosActivos = $scope.filters;
+      //CkanService.filtrosActivos = $scope.cloneArray($scope.filters);
       $scope.resetDataWhenFilter();
       //reload charts
       $scope.setChartsData();
@@ -109,15 +114,23 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
     }
   }
   $scope.filterA_o = function(a_o){
-    if ( $scope.filters.a_o[a_o] == true ){
-      if ( a_o == 'uno' ){
-        $scope.filters.a_o.ocho = false;
-      }
-      else {
+    if(a_o=="2018"){
+      if($scope.filters.a_o.ocho == true){
         $scope.filters.a_o.uno = false;
+      }else{
+        $scope.filters.a_o.uno = true;
       }
     }
+    if(a_o=="2011"){
+      if($scope.filters.a_o.uno == true){
+        $scope.filters.a_o.ocho = false;
+      }else{
+        $scope.filters.a_o.ocho = true;
+      }
+    }
+    console.log($scope.filters.a_o);
   }
+
   $scope.filterChange = function(totalDiv, sumar){
     console.log(totalDiv+': '+sumar);
     if (sumar) {
@@ -181,12 +194,167 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
     if(CkanService.asentamientosActivos){
       return CkanService.asentamientosActivos.length;
     }else{
-      return "656";
+      return "";
     }
   }
 
   /*Charts*/
   $scope.setChartsData = function(){
+    $scope.setChartsDataValues();
+    $scope.setChartsHistory();
+    document.getElementById("spinner").style.display = "none";
+  }
+
+  $scope.setChartsHistoryValues = function(asentamientos2018,asentamientos2011){
+    //Porcentaje alumbrado
+    var alumbradoSi2018 = 0;
+    var alumbradoNo2018 = 0;
+    var alumbradoSi2011 = 0;
+    var alumbradoNo2011 = 0;
+    //Porcentaje paradas
+    var paradasSi2018 = 0;
+    var paradasNo2018 = 0;
+    var paradasSi2011 = 0;
+    var paradasNo2011 = 0;
+    //Porcentaje placas nombres
+    var placasSi2018 = 0;
+    var placasNo2018 = 0;
+    var placasSi2011 = 0;
+    var placasNo2011 = 0;
+    //Porcentaje arbolado
+    var arboladoSi2018 = 0;
+    var arboladoNo2018 = 0;
+    var arboladoSi2011 = 0;
+    var arboladoNo2011 = 0;
+
+    asentamientos2018.forEach(function(asentamiento,key){
+      //Calcular alumbrado
+      if(asentamiento.alumbrado_asent==1){
+        alumbradoSi2018 += 1;
+      }else{
+        alumbradoNo2018 += 1;
+      }
+      //parada_asent
+      if(asentamiento.parada_asent==1){
+        paradasSi2018 += 1;
+      }else{
+        paradasNo2018 += 1;
+      }
+      //placas_asent
+      if(asentamiento.placas_asent==1){
+        placasSi2018 += 1;
+      }else{
+        placasNo2018 += 1;
+      }
+      //arbolado_asent
+      if(asentamiento.arbolado_asent==1){
+        arboladoSi2018 += 1;
+      }else{
+        arboladoNo2018 += 1;
+      }
+    });
+
+    asentamientos2011.forEach(function(asentamiento,key){
+      //Calcular alumbrado
+      if(asentamiento.alumbrado_asent==1){
+        alumbradoSi2011 += 1;
+      }else{
+        alumbradoNo2011 += 1;
+      }
+      //parada_asent
+      if(asentamiento.parada_asent==1){
+        paradasSi2011 += 1;
+      }else{
+        paradasNo2011 += 1;
+      }
+      //placas_asent
+      if(asentamiento.placas_asent==1){
+        placasSi2011 += 1;
+      }else{
+        placasNo2011 += 1;
+      }
+      //arbolado_asent
+      if(asentamiento.arbolado_asent==1){
+        arboladoSi2011 += 1;
+      }else{
+        arboladoNo2011 += 1;
+      }
+    });
+
+    //alumbrado chart data
+    $scope.porcentajeAlumbradoSi2018 = $scope.redondear(alumbradoSi2018*100/asentamientos2018.length);
+    $scope.porcentajeAlumbradoSi2011 = $scope.redondear(alumbradoSi2011*100/asentamientos2011.length);
+
+    //paradas chart data
+    $scope.porcentajeParadasSi2018 = $scope.redondear(paradasSi2018*100/asentamientos2018.length);
+    $scope.porcentajeParadasSi2011 = $scope.redondear(paradasSi2011*100/asentamientos2011.length);
+
+    //placas
+    $scope.porcentajePlacasSi2018 = $scope.redondear(placasSi2018*100/asentamientos2018.length);
+    $scope.porcentajePlacasSi2011 = $scope.redondear(placasSi2011*100/asentamientos2011.length);
+
+    //arbolado
+    $scope.porcentajeArboladoSi2018 = $scope.redondear(arboladoSi2018*100/asentamientos2018.length);
+    $scope.porcentajeArboladoNo2018 = $scope.redondear(arboladoNo2018*100/asentamientos2018.length);
+    $scope.porcentajeArboladoSi2011 = $scope.redondear(arboladoSi2011*100/asentamientos2011.length);
+    $scope.porcentajeArboladoNo2011 = $scope.redondear(arboladoNo2011*100/asentamientos2011.length);
+  }
+
+  $scope.setChartsHistory = function(){
+    //Lo primero es saber que datos ya tengo cargados para cargar los del otro año
+    console.log("La data cargada pertenece a "+CkanService.lastLoadedDataYear);
+    var yearToLoad = "2011";
+    var asentamientos2018 = CkanService.asentamientosActivos;
+    var asentamientos2011 = null;
+    if(CkanService.lastLoadedDataYear=="2011"){
+      yearToLoad = "2018";
+      asentamientos2011 = CkanService.asentamientosActivos;
+      asentamientos2018 = null;
+    }
+    //Cargo el año que me falta
+    if(Object.keys($scope.filters).length > 0){
+      //Hay filtros activos
+      $scope.filters['a_o'] = {ocho: false, uno: false};
+      //Hay filtros, entonces cargo la data para el año que falta pero con esos filtros
+      //Invierto el año en los filtros
+      if(yearToLoad=="2018"){
+        $scope.filters.a_o.uno=false;
+        $scope.filters.a_o.ocho=true;
+      }
+      if(yearToLoad=="2011"){
+        $scope.filters.a_o.uno=true;
+        $scope.filters.a_o.ocho=false;
+      }
+      CkanService.getData($scope.filters).then(function (response) {
+        $scope.filters.a_o = {};
+        if(yearToLoad=="2018"){
+          //Invierto el año en los filtros para que queden igual de nuevo
+          $scope.filters.a_o.uno=true;
+          $scope.filters.a_o.ocho=false;
+          asentamientos2018 = response;
+        }
+        if(yearToLoad=="2011"){
+          $scope.filters.a_o.uno=false;
+          $scope.filters.a_o.ocho=true;
+          asentamientos2011 = response;
+        }
+        $scope.setChartsHistoryValues(asentamientos2018,asentamientos2011);
+      });
+    }else{
+      //No hay filtros, entonces cargo la data total para el año que falta
+      CkanService.getAllData(yearToLoad).then(function (response) {
+        if(yearToLoad=="2018"){
+          asentamientos2018 = response;
+        }
+        if(yearToLoad=="2011"){
+          asentamientos2011 = response;
+        }
+        $scope.setChartsHistoryValues(asentamientos2018,asentamientos2011);
+      });
+    }
+  }
+
+  $scope.setChartsDataValues = function(){
     $scope.setAreaData();
     var cantidadViviendas = 0;
     var cantidadPersonas = 0;
@@ -429,7 +597,6 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
 
     //Colores
     $scope.colors = ['#0092dd', '#1cc7bd', '#feb429', '#c85757'];
-    document.getElementById("spinner").style.display = "none";
   }
 
   $scope.redondear = function(value){
@@ -440,5 +607,22 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
     $state.go("app.map");
   }
 
+  $scope.cloneArray = function(obj){
+    if (Object.prototype.toString.call(obj) === '[object Array]') {
+        var out = [], i = 0, len = obj.length;
+        for ( ; i < len; i++ ) {
+            out[i] = arguments.callee(obj[i]);
+        }
+        return out;
+    }
+    if (typeof obj === 'object') {
+        var out = {}, i;
+        for ( i in obj ) {
+            out[i] = arguments.callee(obj[i]);
+        }
+        return out;
+    }
+    return obj;
+  }
 
 }]);
