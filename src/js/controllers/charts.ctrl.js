@@ -59,7 +59,6 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
       $scope.filters['a_o'] = {ocho: true};
     }
     document.getElementById("spinner").style.display = "block";
-    console.log($scope.filters);
     CkanService.getData($scope.filters).then(function (asentamientos) {
       CkanService.asentamientosActivos = asentamientos;
       CkanService.filtrosActivos = $scope.filters;
@@ -128,11 +127,9 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
         $scope.filters.a_o.ocho = true;
       }
     }
-    console.log($scope.filters.a_o);
   }
 
   $scope.filterChange = function(totalDiv, sumar){
-    console.log(totalDiv+': '+sumar);
     if (sumar) {
       document.getElementById(totalDiv).textContent = parseInt(document.getElementById(totalDiv).textContent) + 1;
       document.getElementById('filters-applied').textContent = parseInt(document.getElementById('filters-applied').textContent) + 1;
@@ -302,7 +299,6 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
 
   $scope.setChartsHistory = function(){
     //Lo primero es saber que datos ya tengo cargados para cargar los del otro año
-    console.log("La data cargada pertenece a "+CkanService.lastLoadedDataYear);
     var yearToLoad = "2011";
     var asentamientos2018 = CkanService.asentamientosActivos;
     var asentamientos2011 = null;
@@ -400,7 +396,6 @@ function($scope,$state,CkanService,$ionicScrollDelegate) {
     var arboladoSi = 0;
     var arboladoNo = 0;
 
-    console.log(CkanService.asentamientosActivos);
     CkanService.asentamientosActivos.forEach(function(asentamiento,key){
 
       //Total personas
