@@ -241,6 +241,17 @@ p {
   font-size: 10px;
 }
 
+#allCharts {
+  position: absoulute;
+  height: 1800px;
+  margin-bottom: 75px;
+  width: auto;
+}
+
+.chartsInsideTabMainTitle {
+  width: 100% !important;
+}
+
 #static-content {
   overflow-y: scroll;
 }
