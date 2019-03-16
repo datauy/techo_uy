@@ -97,6 +97,7 @@ p {
       flex-direction: column;
       padding-left: 15px;
       padding-top: 55px;
+      height: auto !important;
     }
 
     .chartsTopBarItem {
