@@ -7,13 +7,21 @@
 .logo-container {
   width: 25%;
 	transform: none;
-	padding: 1% 19px;
-}
-.navbar-toggler {
-	display: none;
+	padding: 2px 19px;
 }
 img#logo {
   height: 37.8px;
+  float: left;
+}
+.logo-container span {
+  float: left;
+  width: 100%;
+  margin: 2px 12px;
+  font-weight: 600;
+  color: #fff;
+}
+.navbar-toggler {
+  display: none;
 }
 .navbar-nav {
   float: left;
