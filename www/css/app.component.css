@@ -20,6 +20,16 @@ img#logo {
   font-weight: 600;
   color: #fff;
 }
+.beta {
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  z-index: 4;
+  background: #0092dd;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 2px;
+}
 
 .navbar-toggler {
 	display: none;
