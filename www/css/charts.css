@@ -4,6 +4,7 @@
     touch-action: none;
     height: 100%;
     position: relative;
+    margin-left: 56px;
 }
 
 .chartsTopBar{
