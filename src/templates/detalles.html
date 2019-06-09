@@ -1,0 +1,249 @@
+<div id="asentamiento-activo" style="display:none;">
+  <div id="astto-relevamiento" class="half">Relevado {{currentYear}} | ID {{asentamiento._id}}</div>
+  <div id="astto-cerrar-asentamiento" class="half right close"><a ng-click="toggleDetalles()">CERRAR<img src="img/ic-close-black.svg"></a></div>
+  <div id="astto-nombre">{{asentamiento.nombre}}</div>
+  <div id="astto-nombre-otro">{{asentamiento.nombre_otro}}</div>
+  <img class="main" src="https://institucional.techo.org/uruguay/wp-content/uploads/sites/21/2017/10/techo-footer.png"/>
+  <ul class="astto-tablas-33">
+    <li>
+      <label>Departamento</label>
+      <div id="astto-departamento" class="astto-valores">{{asentamiento.departamento}}</div>
+    </li>
+    <li>
+      <label>Municipio / Localidad</label>
+      <div id="astto-municipio" class="astto-valores">{{asentamiento.municipio}}</div>
+    </li>
+    <li>
+      <label>Tipo de asentamiento</label>
+      <div id="astto-tipo" class="astto-valores">{{asentamiento.tipo_asentamiento == 1 ? 'Urbano' : 'Rural'}}</div>
+    </li>
+  </ul>
+  <h2>VIVIENDAS</h2>
+  <ul>
+    <li class="astto-tablas-92">
+      <label>Número de edificaciones</label>
+      <div id="astto-edificaciones" class="astto-tablas">{{asentamiento.nro_viviendas}}</div>
+    </li>
+    <li>
+      <label>Porcentaje de cuadras en donde más de la mitad de las viviendas presentan techos precarios</label>
+      <div id="astto-techos" class="astto-tablas">{{asentamiento.p_techos_prec}}%</div>
+    </li>
+    <li class="right">
+      <label>Porcentaje de cuadras en donde más de la mitad de las viviendas presentan paredes precarias</label>
+      <div id="astto-paredes" class="astto-tablas">{{asentamiento.p_paredes_prec}}%</div>
+    </li>
+    <li>
+      <label>Porcentaje de cuadras en donde más de la mitad de las viviendas presentan contador eléctrico</label>
+      <div id="astto-contador" class="astto-tablas">{{asentamiento.p_contelect}}%</div>
+    </li>
+    <li class="right">
+      <label>Porcentaje de cuadras en donde más de la mitad de las viviendas presentan cuneta de drenaje para agua pluvial</label>
+      <div id="astto-zanjas" class="astto-tablas">{{asentamiento.p_c_drenaje}}%</div>
+    </li>
+  </ul>
+  <h2>ENTORNO URBANO</h2>
+  <ul class="half">
+    <li class="half">
+      <label>Porcentaje de cuadras con calle pavimentada, parcialmente pavimentada o de balastro</label>
+      <div id="astto-calles" class="astto-tablas">{{asentamiento.p_calle_materiales}}%</div>
+    </li>
+    <li class="half">
+      <label>Porcentaje de cuadras sin vereda o donde la vereda presenta materiales precarios (pastizal, tierra, otros)</label>
+      <div id="astto-veredas" class="astto-tablas">{{asentamiento.p_acera_materiales}}%</div>
+    </li>
+  </ul>
+  <ul class="half right">
+    <li class="half check-back-{{asentamiento.arbolado_asent}}" id="astto-arbolado">
+      Presencia de arbolado en más de la mitad de las cuadras del asentamiento
+    </li>
+    <li class="half check-back-{{asentamiento.alumbrado_asent}}" id="astto-alumbrado">
+      Presencia de alumbrado público en más de la mitad de las cuadras del asentamiento
+    </li>
+    <li/>
+    <li class="half check-back-{{asentamiento.basural_asent}}" id="astto-basurales">
+      Presencia de basural en el asentamiento
+    </li>
+    <li/>
+    <li class="half check-back-{{asentamiento.parada_asent}}" id="astto-bus">
+      Presencia de parada de ómnibus en el asentamiento
+    </li>
+    <li/>
+    <li class="half check-back-{{asentamiento.placas_asent}}" id="astto-placas">
+      Presencia de placas con nombres de calles en más de la mitad de las cuadras del asentamiento
+    </li>
+  </ul>
+  <h2>HISTORIA</h2>
+  <ul>
+    <li>
+      <label>Año aproximado de creación</label>
+      <div class="astto-tablas">{{asentamiento.y_creacion}}</div>
+    </li>
+    <li class="right">
+      <label>Año aproximado de mayor crecimiento</label>
+      <div class="astto-tablas">{{asentamiento.y_crecimiento}}</div>
+    </li>
+    <li class="astto-tablas-92">
+      <label>Modo de conformación</label>
+      <div class="astto-valores">{{asentamiento.modo_conformacion}}</div>
+    </li>
+  </ul>
+  <h2>SERVICIOS BÁSICOS</h2>
+  <div>
+    <ul class="half">
+      <li>
+        <label>Cuadras a las que dista el iardín infantil público / centro Caif más cercano</label>
+        <div class="astto-valores">{{asentamiento.jardin_caif}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista la escuela primaria pública más cercana</label>
+        <div class="astto-valores">{{asentamiento.primaria}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista el liceo / UTU más cercano</label>
+        <div class="astto-valores">{{asentamiento.liceo_UTU}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista el hospital público más cercano</label>
+        <div class="astto-valores">{{asentamiento.hospital}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista la policlínica más cercana</label>
+        <div class="astto-valores">{{asentamiento.policlinica}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista la estación de policía más cercana</label>
+        <div class="astto-valores">{{asentamiento.policia}}</div>
+      </li>
+    </ul>
+    <ul class="half right">
+      <li>
+        <label>Cuadras a las que dista la parada de transporte público más cercana</label>
+        <div class="astto-valores">{{asentamiento.parada_transporte}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista la plaza o parque más cercano</label>
+        <div class="astto-valores">{{asentamiento.plaza_parque}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista el centro de deportes o cultural más cercano</label>
+        <div class="astto-valores">{{asentamiento.deportes_cultural}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista el centro comunal zonal o municipaliad más cercana</label>
+        <div class="astto-valores">{{asentamiento.cc_muni}}</div>
+      </li>
+      <li>
+        <label>Cuadras a las que dista la estación de bomberos más cercana</label>
+        <div class="astto-valores">{{asentamiento.bomberos}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="half">
+    <h2>ACCESOS</h2>
+    <ul>
+      <li>
+        <label>Modo de acceso a energía eléctrica preponderante</label>
+        <div class="astto-valores">{{asentamiento.Saneamiento_ServiciosElectricida}}</div>
+      </li>
+      <li>
+        <label>Modo de saneamiento de excretas preponderante</label>
+        <div class="astto-valores">{{asentamiento.Saneamiento_ServiciosSaneamiento}}</div>
+      </li>
+      <li>
+        <label>Modo de acceso a agua potable preponderante</label>
+        <div class="astto-valores">{{asentamiento.Saneamiento_ServiciosAgua_Potabl}}</div>
+      </li>
+      <li>
+        <label>Modo de recolección de residuos preponderante</label>
+        <div class="astto-valores">{{asentamiento.Saneamiento_ServiciosServicio_re}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="half right">
+    <h2>Organizaciones que trabajan allí</h2>
+    <ul>
+      <li>
+        <label>Existe algún tipo de organización interna/barrial</label>
+        <div class="astto-valores">{{asentamiento.Org_Asentamiento_InternasOrganiz}}</div>
+      </li>
+      <li>
+        <label>Qué tipo de proyectos/iniciativas a liderado la organización vecinal</label>
+        <div class="astto-valores" ng-repeat="org in asentamiento.Org_Asentamiento_Internas_Qu_pro">{{org}}</div>
+      </li>
+    </ul>
+  </div>
+  <h2>Comparativo año a año</h2>
+  <ul class="half">
+    <li class="half">
+      <label>Porcentaje de cuadras con calle pavimentada, parcialmente pavimentada o de balastro</label>
+      <label>2018</label>
+      <div class="astto-tablas">{{asentamiento.p_calle_materiales}}%</div>
+      <label>2011</label>
+      <div class="astto-tablas">{{asentamiento[2011].p_calle_materiales}}%</div>
+    </li>
+    <li class="half">
+      <label>Porcentaje de cuadras sin vereda o donde la vereda presenta materiales precarios (pastizal, tierra, otros)</label>
+      <label>2018</label>
+      <div class="astto-tablas">{{asentamiento.p_acera_materiales}}%</div>
+      <label>2011</label>
+      <div class="astto-tablas">{{asentamiento[2011].p_acera_materiales}}%</div>
+    </li>
+  </ul>
+  <ul class="half right spaced">
+    <label>Presencia de arbolado en más de la mitad de las cuadras del asentamiento</label>
+    <li class="half check-back-{{asentamiento.arbolado_asent}}">
+      2018
+    </li>
+    <li class="half check-back-{{asentamiento[2011].arbolado_asent}}">
+      2011
+    </li>
+    <label>Presencia de alumbrado público en más de la mitad de las cuadras del asentamiento</label>
+    <li class="half check-back-{{asentamiento.alumbrado_asent}}">
+      2018
+    </li>
+    <li class="half check-back-{{asentamiento[2011].alumbrado_asent}}">
+      2011
+    </li>
+    <label>Presencia de basural en el asentamiento</label>
+    <li class="half check-back-{{asentamiento.basural_asent}}">
+      2018
+    </li>
+    <li class="half check-back-{{asentamiento.basural_asent}}">
+      2011
+    </li>
+    <li/>
+    <label>Presencia de parada de ómnibus en el asentamiento</label>
+    <li class="half check-back-{{asentamiento.parada_asent}}">
+      2018
+    </li>
+    <li class="half check-back-{{asentamiento[2011].parada_asent}}">
+      2011
+    </li>
+    <label>Presencia de placas con nombres de calles en más de la mitad de las cuadras del asentamiento</label>
+    <li class="half check-back-{{asentamiento.placas_asent}}">
+      2018
+    </li>
+    <li class="half check-back-{{asentamiento[2011].placas_asent}}">
+      2011
+    </li>
+  </ul>
+  <h2>ÍNDICE DE VULNERABILIDAD</h2>
+  <ul class="last">
+    <li>
+      <label>Índice de vulnerabilidad habitacional, urbanística y de riesgo/por tramos</label>
+      <div class="astto-valores">{{asentamiento.tramos_ind_vul_hab_urb_rie}}</div>
+    </li>
+    <li class="right">
+      <label>Índice de vulnerabilidad componente habitacional/por tramos</label>
+      <div class="astto-valores">{{asentamiento.tramos_ind_habitacional}}</div>
+    </li>
+    <li>
+      <label>Índice de vulnerabilidad componente de riesgo/por tramos</label>
+      <div class="astto-valores">{{asentamiento.tramos_ind_comp_riesgo}}</div>
+    </li>
+    <li class="right">
+      <label>Índice de vulnerabilidad componente urbano/pot tramos</label>
+      <div class="astto-valores">{{asentamiento.tramos_ind_urb}}</div>
+    </li>
+  </ul>
+</div>

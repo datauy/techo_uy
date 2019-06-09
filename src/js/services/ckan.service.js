@@ -6,9 +6,30 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
   CkanServiceObj.filtrosActivos = null;
   CkanServiceObj.lastLoadedDataYear = null;
   CkanServiceObj.rids = new Array();
-  CkanServiceObj.rids["2018"] = "090341a0-dfba-43fd-bc82-da90394a883d";
-  CkanServiceObj.rids["2011"] = "14348e65-292d-4b0d-b48b-0cce62418466";
+  CkanServiceObj.rids["2018"] = "ce78951d-6ad2-4e1c-8fa6-9d42d04115c0";
+  CkanServiceObj.rids["2011"] = "bd962338-cb7f-470e-864c-162a4d3c4ba4";
 
+  CkanServiceObj.departamentos = {
+    1 : "Montevideo",
+    2 : "Artigas",
+    3 : "Canelones",
+    4 : "Cerro Largo",
+    5 : "Colonia",
+    6 : "Durazno",
+    7 : "Flores",
+    8 : "Florida",
+    9 : "Lavalleja",
+    10 : "Maldonado",
+    11 : "Paysandú",
+    12 : "Río Negro",
+    13 : "Rivera",
+    14 : "Rocha",
+    15 : "Salto",
+    16 : "San José",
+    17 : "Soriano",
+    18 : "Tacuarembó",
+    19 : "Treinta y Tres",
+  };
 
   CkanServiceObj.getAllPolygons = function () {
       return $http.get(ConfigService.ckanAllPolygonsURL, { headers: {'Authorization': 'd7e78b6e-3eed-4d69-8387-ab0196121a51'} }).then(function (response) {
@@ -34,7 +55,7 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
     var query = "SELECT * from ";
     if (filters.a_o && filters.a_o.uno) {
       CkanServiceObj.lastLoadedDataYear = "2011";
-      query += '"14348e65-292d-4b0d-b48b-0cce62418466" ';
+      query += '"'+CkanServiceObj.rids["2011"]+'" ';
       //removemos campos que no están // TODO: inhabilitar los filtros
       if(filters.hasOwnProperty('tipo')) delete filters.tipo;
       if(filters.hasOwnProperty('vivendas_no')) delete filters.vivendas_no;
@@ -46,7 +67,7 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
     else {
       //Fallback 2018
       CkanServiceObj.lastLoadedDataYear = "2018";
-      query += '"090341a0-dfba-43fd-bc82-da90394a883d" ';
+      query += '"'+CkanServiceObj.rids["2018"]+'" ';
     }
     if ( filters.depto == '0') {
       delete filters.depto;
@@ -130,25 +151,26 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
   };
 
   CkanServiceObj.getDataById = function (id2018) {
+    console.log('DATA BY ID:'+ id2018);
       var url = '/ckanData';
       var params = {
-        resource_id: 'a3c8a073-ce32-434b-a751-f35c7b750968',
+        resource_id: CkanServiceObj.rids["2011"],
         limit:1,
-        q: id2018
+        q: id2018,
       };
-      return $http.post(url, params).then(function (response) {
+      console.log(params);
+      return $http.get(url, {"params": params, cache: false}).then(function (response) {
         console.log("termina POST");
-        console.log(response);
-        return response;
+        console.log(response.data.result.records[0]);
+        return response.data.result.records[0];
       });
   };
 
   CkanServiceObj.getAllData = function (year) {
     var rid = CkanServiceObj.rids[year];
     CkanServiceObj.lastLoadedDataYear = year;
-    console.log('ALLDATA');
       var url = '/ckanData';
-      return $http.post(url, { resource_id: rid, limit:700 }).then(function (response) {
+      return $http.post(url, { resource_id: rid, limit: 800 }).then(function (response) {
         return response.data.result.records;
       });
   };
@@ -161,6 +183,5 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
       return response.data.result.records;
     });
   };
-
   return CkanServiceObj;
 }]);

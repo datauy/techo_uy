@@ -104,8 +104,9 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
       }else{
         MapService.centerMapOnCoords(-32.462703, -55.701468, 7);
       }
-      if ( window.innerWidth <= 768 ){
-        document.getElementById("filters").style.display = "none";
+      if ( window.innerWidth >= 768 ){
+        document.getElementById("filters").style.display = "block";
+        document.getElementById("filters-close").style.display = "none";
       }
       //$scope.loadDefautFilters();
     });
@@ -150,6 +151,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
         $scope.filters = CkanService.filtrosActivos;
         $scope.updatePins();
       }else{
+        $scope.currentYear = "2018";
         $scope.filters.a_o = {uno: false, ocho: true};
         $scope.loadPinsLayer();
       }
@@ -395,6 +397,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
     $scope.loadPinsLayer = function(){
       document.getElementById("spinner").style.display = "block";
         CkanService.getAllData("2018").then(function (response) {
+          $scope.currentYear = "2018";
           CkanService.asentamientosActivos = response;
           $scope.updatePins();
         });
@@ -1094,6 +1097,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
             $scope.filters['a_o'] = {ocho: true};
           }
           CkanService.getData($scope.filters).then(function (asentamientos) {
+            $scope.currentYear = CkanService.lastLoadedDataYear;
             CkanService.asentamientosActivos = asentamientos;
             CkanService.filtrosActivos = $scope.filters;
             //CkanService.filtrosActivos = $scope.cloneArray($scope.filters);
@@ -1136,7 +1140,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 delete $scope.asentamientos_layers[key];
               })
             }
-            CkanService.asentamientosActivos.forEach(function(feature){
+            CkanService.asentamientosActivos.forEach(function(feature, key){
               var latlngs = {};
               if($scope.getTypeOfMapObject(feature.wkt_geom)=="Polygon"){
                 latlngs = $scope.getOnlyCoordinatesPolygon(feature.wkt_geom);
@@ -1159,11 +1163,10 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
                 astPin = $scope.astVulnera[feature.vulnera_urb].icon;
               }*/
               //Popup
-              var astPopup = '<div class="popup-header">'+
+              var astPopup = '<div class="popup"><div class="popup-header">'+
               '<div class="popup-ast-nombre">'+feature.nombre +"</div>"+
               '<div class="popup-ast-nombre-otro">'+feature.nombre_otro +"</div>"+
-              '</div>'+
-              '<ul class="popup-body">'+
+              '</div>'+'<ul class="popup-body">'+
               '<li><label>Año de creación</label><div class="popup-value">'+
               feature.y_creacion+'<div class="popup-value"></li>'+
               '<!--<li><label>Vulnerabilidad</label><div class="popup-value" style="color:'+astColor+'">'+
@@ -1172,9 +1175,9 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               feature.estim_personas_ajust+'<div class="popup-value"></li>-->'+
               '<li><label>Número estimado de viviendas</label><div class="popup-value">'+
               feature.nro_viviendas+'<div class="popup-value"></li>'+
-              '</ul><div class="popup-footer"><a href="#">Click para ver más detalles</a></div>';
-
-              var polygon = L.polygon(latlngs, {color: astColor}).bindPopup(astPopup).addTo(map);
+              '</ul><div class="popup-footer"><a ng-click="getDetails('+key+')">Click para ver más detalles</a></div></div>';
+              var astPopupCompiled = $compile(astPopup)($scope);
+              var polygon = L.polygon(latlngs, {color: astColor}).bindPopup(astPopupCompiled[0]).addTo(map);
 
               $scope.asentamientos_layers.push(polygon);
               //console.log(feature);
@@ -1184,7 +1187,7 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
               /*El cálculo de centroides de los polígonos deja el sistema muy lento, se generan datos y se cargan a la planilla*/
               //var astBounds = polygon.getBounds();// Verificar que bounds no esté vacío: .getCenter();
               if (feature.cent_lat && feature.cent_long) {
-                var astMarker = L.marker([feature.cent_lat,feature.cent_long], {icon: L.icon(astIcon)}).bindPopup(astPopup).addTo(map);
+                var astMarker = L.marker([feature.cent_lat,feature.cent_long], {icon: L.icon(astIcon)}).bindPopup(astPopupCompiled[0]).addTo(map);
                 $scope.asentamientos_layers.push(astMarker);
               }
             });
@@ -1280,6 +1283,219 @@ pmb_im.controllers.controller('MapController', ['$scope', '_',
           }
           return obj;
         }
-  }
+        $scope.getDetails = function(key) {
+          //traducimos en vista para reducir la carga inicial
+          var astto = CkanService.asentamientosActivos[key];
+          console.log('Asentamiento traducido');
+          console.log(astto);
+          if ( !astto.isTranslated ) {
+            $scope.translateAstto(astto);
+          }
+          $scope.asentamiento = CkanService.asentamientosActivos[key];
+          console.log('Asentamiento activo');
+          console.log($scope.asentamiento);
+          document.getElementById('asentamiento-activo').style.display = "block";
+        }
+        $scope.toggleDetalles = function() {
+          document.getElementById('asentamiento-activo').style.display = "none";
+        }
+        //TRADUCCION DE VARIABLES
+        $scope.translateAstto = function(astto) {
+          //Ponemos el nombre del departamento
+          astto.departamento = CkanService.departamentos[astto.depto];
+          //Ponemos municipio para montevideo
+          if ( astto.depto == 1) {
+            switch (astto.municipio) {
+              case 1:
+                astto.municipio = "A";
+              break;
+              case 2:
+                astto.municipio = "B";
+              break;
+              case 3:
+                astto.municipio = "C";
+              break;
+              case 4:
+                astto.municipio = "D";
+              break;
+              case 5:
+                astto.municipio = "E";
+              break;
+              case 6:
+                astto.municipio = "F";
+              break;
+              case 7:
+                astto.municipio = "G";
+              break;
+              case 8:
+                astto.municipio = "CH";
+              break;
+              default:
+                astto.municipio = "Otro / No corresponde";
+            }
+          }
+          switch (astto.modo_conformacion) {
+            case 1:
+              astto.modo_conformacion = "Toma de tierras de forma espontánea y/o progresiva. (Ocupación hormiga)";
+            break;
+            case 2:
+              astto.modo_conformacion = "Toma de tierras colectiva y organizada, con posterior loteo de terreno";
+            break;
+            case 3:
+              astto.modo_conformacion = "De forma planificada con participación del estado (loteo estatal)";
+            break;
+            default:
+              astto.modo_conformacion = "Sin especificar";
+          }
+          switch (astto.Saneamiento_ServiciosElectricida) {
+            case 1:
+              astto.Saneamiento_ServiciosElectricida = "Red pública, con medidores propios (conexión estándar)";
+            break;
+            case 2:
+              astto.Saneamiento_ServiciosElectricida = "Red pública, con medidor propio con cuota social";
+            break;
+            case 3:
+              astto.Saneamiento_ServiciosElectricida = 'Red pública sin medidor ("colgado" o "pinchado")';
+            break;
+            case 4:
+              astto.Saneamiento_ServiciosElectricida = "De un generador propio o comunitario";
+            break;
+            case 6:
+              astto.Saneamiento_ServiciosElectricida = "No disponen de energía eléctrica";
+            break;
+            case 98:
+              astto.Saneamiento_ServiciosElectricida = "Otro";
+            break;
+            default:
+              astto.Saneamiento_ServiciosElectricida = "No sabe/ no responde";
+          }
+          switch (astto.Saneamiento_ServiciosSaneamiento) {
+            case 1:
+              astto.Saneamiento_ServiciosSaneamiento = "Red cloacal pública (saneamiento regularizado)";
+            break;
+            case 2:
+              astto.Saneamiento_ServiciosSaneamiento = "Desagüe a pozo negro con extracción por barométrica";
+            break;
+            case 3:
+              astto.Saneamiento_ServiciosSaneamiento = "Desagüe sólo a pozo negro sin extracción por barométrica";
+            break;
+            case 98:
+              astto.Saneamiento_ServiciosSaneamiento = "Otro";
+            break;
+            default:
+              astto.Saneamiento_ServiciosSaneamiento = "No sabe/ no responde";
+          }
+          switch (astto.Saneamiento_ServiciosAgua_Potabl) {
+            case 1:
+              astto.Saneamiento_ServiciosAgua_Potabl = "Conexión regular";
+            break;
+            case 2:
+              astto.Saneamiento_ServiciosAgua_Potabl = "Conexión regular con cuota social";
+            break;
+            case 3:
+              astto.Saneamiento_ServiciosAgua_Potabl = "Pozo o cachimba";
+            break;
+            case 6:
+              astto.Saneamiento_ServiciosAgua_Potabl = "Conexión informal Manguera o canilla comunitaria";
+            break;
+            case 7:
+              astto.Saneamiento_ServiciosAgua_Potabl = "Agua lluvia";
+            break;
+            case 98:
+              astto.Saneamiento_ServiciosSaneamiento = "Otro";
+            break;
+            default:
+              astto.Saneamiento_ServiciosAgua_Potabl = "No sabe/ no responde";
+          }
+          switch (astto.Saneamiento_ServiciosServicio_re) {
+            case 1:
+              astto.Saneamiento_ServiciosServicio_re = "Sí, con camión recolector por puerta de domicilios";
+            break;
+            case 2:
+              astto.Saneamiento_ServiciosServicio_re = "Sí, con bolqueta (contenedor)";
+            break;
+            case 3:
+              astto.Saneamiento_ServiciosServicio_re = "No, se tira a un basurero informal";
+            break;
+            case 4:
+              astto.Saneamiento_ServiciosServicio_re = "No, se quema";
+            break;
+            case 5:
+              astto.Saneamiento_ServiciosServicio_re = "No, se entierra";
+            break;
+            case 6:
+              astto.Saneamiento_ServiciosServicio_re = "No, se tira a un arroyo, cañada o río";
+            break;
+            case 98:
+              astto.Saneamiento_ServiciosServicio_re = "Otro";
+            break;
+            default:
+              astto.Saneamiento_ServiciosServicio_re = "No sabe/ no responde";
+          }
+          if (astto.Org_Asentamiento_InternasOrganiz == 1){
+            astto.Org_Asentamiento_InternasOrganiz = 'Si';
+          }
+          else if (astto.Org_Asentamiento_InternasOrganiz == 2) {
+            astto.Org_Asentamiento_InternasOrganiz = 'No';
+          }
+          else {
+            astto.Org_Asentamiento_InternasOrganiz = 'No sabe/ no responde';
+          }
+          if ( astto.Org_Asentamiento_Internas_Qu_pro ) {
+            var orgs = astto.Org_Asentamiento_Internas_Qu_pro.split(" ");
+            astto.Org_Asentamiento_Internas_Qu_pro = [];
+            console.log(orgs);
+            for (var i = 0; i < orgs.length; i++) {
+              switch (orgs[i]) {
+                case "1":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Infraestructura");
+                break;
+                case "2":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Cultura");
+                break;
+                case "3":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Educación");
+                break;
+                case "4":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Capacitación laboral");
+                break;
+                case "5":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Recreación");
+                break;
+                case "6":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Salud");
+                break;
+                case "98":
+                  astto.Org_Asentamiento_Internas_Qu_pro.push("Otro");
+                break;
+              }
+            }
+            //astto.Org_Asentamiento_Internas_Qu_pro += astto.CT == 1 ? '<span class="astto-valores">Infraestructura</span>' : '';
+          }
+          var vulnera = {
+            1: 'Vulnerabilidad baja',
+            2: 'Vulnerabilidad media',
+            3: 'Vulnerabilidad media alta',
+            4: 'Vulnerabilidad alta'
+          };
+          astto.tramos_ind_vul_hab_urb_rie = vulnera[astto.tramos_ind_vul_hab_urb_rie];
+          astto.tramos_ind_habitacional = vulnera[astto.tramos_ind_habitacional];
+          astto.tramos_ind_comp_riesgo = vulnera[astto.tramos_ind_comp_riesgo];
+          astto.tramos_ind_urb = vulnera[astto.tramos_ind_urb];
 
+          astto.isTranslated = 1;
+          CkanService.asentamientosActivos[astto.id] = astto;
+          CkanService.getDataById(astto.id).then(function (astto2011) {
+            CkanService.asentamientosActivos[astto.id][2011] = {
+              'p_calle_materiales': astto2011.p_calle_materiales,
+              'p_acera_materiales':	astto2011.p_acera_materiales,
+              'alumbrado_asent': astto2011.alumbrado_asent,
+              'basural_asent': astto2011.basural_asent,
+              'parada_asent': astto2011.parada_asent,
+              'placas_asent': astto2011.placas_asent,
+              'arbolado_asent': astto2011.arbolado_asent
+            };
+          });
+        }
+  }
 ]);

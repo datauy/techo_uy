@@ -121,3 +121,121 @@
 .neutro {
   background-color: #8894a3;
 }
+/*Detalles*/
+#asentamiento-activo {
+  float: left;
+  width: 60%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 24px;
+  max-width: 632px;
+  color: #8894a3;
+}
+#asentamiento-activo h2 {
+  background-color: rgba(28, 199, 189, 0.1);
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2.8px;
+  color: #2a323d;
+  float: left;
+  margin-top: 40px;
+}
+#asentamiento-activo img.main {
+  width: 100%;
+  background: #0092dd;
+  float: left;
+  margin: 16px 0 24px;
+}
+#asentamiento-activo div {
+  float: left;
+  width: 100%;
+}
+#asentamiento-activo ul {
+  width: 100%;
+  float: left;
+}
+#asentamiento-activo div.half,
+#asentamiento-activo ul.half {
+  width: 47%;
+}
+#asentamiento-activo div.half.right,
+#asentamiento-activo ul.half.right {
+  margin-left: 6%;
+}
+#asentamiento-activo li {
+  width: 47%;
+  float: left;
+  margin-top: 16px;
+}
+#asentamiento-activo li.right {
+  margin-left: 6%;
+}
+#asentamiento-activo .half li {
+  width: 100%;
+}
+#asentamiento-activo .astto-tablas-33 li {
+  width: 33%;
+  float: left;
+  margin: 16px 16px 0 0;
+}
+#asentamiento-activo li.astto-tablas-92 {
+  width: 92%;
+}
+#asentamiento-activo label {
+  width: 100%;
+  float: left;
+  color: #5f6978;
+  font-size: 14px;
+  margin-top: 16px;
+}
+ul.spaced li {
+  margin-top: 16px;
+}
+#astto-relevamiento {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: #8894a3;
+  height: 16px;
+  text-transform: uppercase;
+}
+#astto-cerrar-asentamiento {
+  margin-top: 0;
+}
+#astto-nombre {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #2a323d;
+}
+.astto-tablas {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #2a323d;
+}
+.astto-valores {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2a323d;
+}
+.check-back-1 {
+  background-image: url(/img/ic-available-on.svg), none;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  padding-left: 32px;
+}
+.check-back-0 {
+  background-image: url(/img/ic-available-off.svg), none;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  padding-left: 32px;
+}
+#asentamiento-activo .last {
+  margin-bottom: 96px;
+}
