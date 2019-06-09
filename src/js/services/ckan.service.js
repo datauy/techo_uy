@@ -51,7 +51,12 @@ pmb_im.services.factory('CkanService', ['$http', 'leafletData','ConfigService', 
       });
   }
 
-  CkanServiceObj.getData = function (filters) {
+  CkanServiceObj.getData = function (originalfilters) {
+    //Clono los filtros porque en angular todos los parámetros son por referencia
+    //y en las charts siempre cargo 2018 y 2011 con los filtros activos
+    //para mostrar los datos históricos, pero esta función si es 2011 borra filtros entonces luego
+    //se pierden. De esta manera se clona la variable y no afecta la variable original de los scope
+    var filters = JSON.parse(JSON.stringify(originalfilters));
     var query = "SELECT * from ";
     if (filters.a_o && filters.a_o.uno) {
       CkanServiceObj.lastLoadedDataYear = "2011";

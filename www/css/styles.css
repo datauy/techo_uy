@@ -87,7 +87,33 @@ p {
     justify-content: flex-end;
 }
 
+.chartsTopBarItem.firstChartTopBarItem {
+  margin-left: 16px;
+}
+
 @media only screen and (max-width: 970px) {
+    .chartsTopBar {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      padding-top: 55px;
+      height: auto !important;
+    }
+
+    .chartsTopBarItem {
+      margin: 0;
+      margin-top: 16px;
+      border-right: none !important;
+    }
+
+    .chartsTopBarItemNoBorder {
+      margin-top: 16px;
+    }
+
+    .chartsTopBarItem.firstChartTopBarItem {
+      margin: 0;
+    }
+
     .content-container {
       margin-left: 24px;
       margin-right: 24px;
@@ -204,6 +230,26 @@ p {
   .navbar-right {
     margin-left: 0;
   }
+}
+
+.tab-item {
+  max-width: 165px;
+}
+
+.tab-title {
+  font-family: 'Open Sans';
+  font-size: 10px;
+}
+
+#allCharts {
+  position: absoulute;
+  height: 1800px;
+  margin-bottom: 75px;
+  width: auto;
+}
+
+.chartsInsideTabMainTitle {
+  width: 100% !important;
 }
 
 #static-content {
